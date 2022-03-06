@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Contents/Styles.css">
+</head>
+
+<body class="bg-image logged-user-image login-view-grid">
+    <header class="grid-header">
+        <img class="logo" src="./images/logo.png">
+        <div class="title">
+            <h1>ESCOGER PARTIDO</h1>
+        </div>
+        <nav class="grid-nav">
+            <a><img src="./images/estadistica.png"></a>
+            <a><img src="./images/partido.png"></a>
+            <a><img src="./images/torneo.png"></a>
+            <a><img src="./images/pendiente.png"></a>
+            <a><img src="./images/logOut.png"></a>
+        </nav>
+    </header>
+
+    <aside class="login-view-sidebar sidebar-grid rounded-corners">
+        <div id="club-profile">
+
+        </div>
+    </aside>
+
+    <main class="center-choose-days">
+
+        <form action="#" method="post">
+            <section class="user-days rounded-corners">
+
+
+                <h1 class="schedule-header">Selecciona el día</h1>
+
+                <div class="days-grid">
+                    <input type="checkbox" id="LUNES" name="LUNES" class="match-hour">
+                    <label for="LUNES">LUNES</label>
+                    <input type="checkbox" id="MARTES" name="MARTES" class="match-hour">
+                    <label for="MARTES">MARTES</label>
+                    <input type="checkbox" id="MIERCOLES" name="MIERCOLES" class="match-hour">
+                    <label for="MIERCOLES">MIERCOLES</label>
+                    <input type="checkbox" id="JUEVES" name="JUEVES" class="match-hour">
+                    <label for="JUEVES">JUEVES</label>
+                    <input type="checkbox" id="VIERNES" name="VIERNES" class="match-hour">
+                    <label for="VIERNES">VIERNES</label>
+                    <input type="checkbox" id="SABADO" name="SABADO" class="match-hour">
+                    <label for="SABADO">SABADO</label>
+                    <input type="checkbox" id="DOMINGO" name="DOMINGO" class="match-hour">
+                    <label for="DOMINGO">DOMINGO</label>
+                </div>
+
+
+            </section>
+            <section class="user-days rounded-corners">
+                <h1 class="schedule-header">Selecciona el club</h1>
+
+                <div id="club-selection">
+
+                </div>
+
+                <div class="add-match">
+                    <div class="add-match-submit center-child">
+                        <input type="submit" value="Buscar Partidos" class="rounded-corners">
+                    </div>
+                </div>
+            </section>
+        </form>
+
+    </main>
+</body>
+
+</html>

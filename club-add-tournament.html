@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Contents/Styles.css">
+</head>
+
+<body class="bg-image logged-club-image login-view-grid">
+    <header class="grid-header">
+        <img class="logo" src="./images/logo.png">
+        <div class="title">
+            <h1>AÑADIR TORNEO</h1>
+        </div>
+        <nav class="grid-nav">
+            <a><img src="./images/estadistica.png"></a>
+            <a><img src="./images/partido.png"></a>
+            <a><img src="./images/torneo.png"></a>
+            <a><img src="./images/pendiente.png"></a>
+            <a><img src="./images/logOut.png"></a>
+        </nav>
+    </header>
+    <aside class="login-view-sidebar sidebar-grid rounded-corners">
+        <div id="club-profile">
+
+        </div>
+    </aside>
+    <main class="login-view-main rounded-corners center-child">
+        <section class="tournament-section rounded-corners">
+            <form action="" method="post">
+                <label for="day">Escoja día</label>
+                <input type="date" name="tournament-day" id="tournament-day" class="rounded-corners" required><br>
+                <label for="tournament">Nombre del Torneo:</label>
+                <input type="text" name="tournament-name" id="tournament-name" class="rounded-corners" required><br>
+                <label for="players">Número de participantes:</label>
+                <input type="number" name="players-number" id="players-number" class="rounded-corners" required><br>
+                <label for="ranked">Clasificatorio</label>
+                <input type="checkbox" name="ranked-check" id="ranked-check"><br>
+                <label for="comments">Comentarios:</label><br>
+                <textarea name="" id="" cols="30" rows="10"></textarea><br>
+                <div class="center-child">
+                    <input type="submit" value="Generar Torneo" class="rounded-corners">
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
