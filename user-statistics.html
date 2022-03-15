@@ -6,16 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./Contents/Styles.css">
 </head>
 
-<body class="bg-image logged-user-image login-view-grid">
-    <header class="grid-header">
-        <img class="logo" src="./images/logo.png">
-        <div class="title">
-            <h1>ESTADÍSTICAS</h1>
-        </div>
-        <nav class="grid-nav">
+<body class="bg-image logged-user-image">
+    <header class="user-header">
+        <img class="logo" src="images/logo.svg">
+        <nav class="nav">
             <a><img src="./images/estadistica.png"></a>
             <a><img src="./images/partido.png"></a>
             <a><img src="./images/torneo.png"></a>
@@ -24,33 +22,62 @@
         </nav>
     </header>
 
-    <aside class="login-view-sidebar sidebar-grid rounded-corners">
-        <div id="club-profile">
-
-        </div>
-    </aside>
-
-    <main class="center-statistics">
-        <section class="user-result rounded-corners">
-            <article id="match-history">
-
-            </article>
-            <article id="match-history">
-
-            </article>
-        </section>
-        <section class="user-img-rank rounded-corners">
-            <div id="ranking-image">
-
+    <main>
+        <aside class="content-section col-2">
+            <img>
+            <div class="user-info-display">
+                <p>Miguel Marco Gol</p>
+                <div>
+                    <p>Partidos jugados:</p>
+                    <p>16</p>
+                </div>
+                <div>
+                    <p>Partidos ganados:</p>
+                    <p>10</p>
+                </div>
+                <div>
+                    <p>Partidos perdidos:</p>
+                    <p>6</p>
+                </div>
+                <div>
+                    <p>Ranking:</p>
+                    <p>Oro</p>
+                </div>
+                <div>
+                    <p>Puntuación:</p>
+                    <p>18</p>
+                </div>
             </div>
-        </section>
-        <section style="grid-column: 1 / span 2;" class="user-statistics-result rounded-corners">
-            <h1 class="schedule-header">Estadistica</h1>
-            <div id="statistics">
-
-            </div>
-        </section>
+        </aside>
     </main>
+
+<!--    <aside class="login-view-sidebar sidebar-grid rounded-corners">-->
+<!--        <div id="club-profile">-->
+
+<!--        </div>-->
+<!--    </aside>-->
+
+<!--    <main class="center-statistics">-->
+<!--        <section class="user-result rounded-corners">-->
+<!--            <article id="match-history">-->
+
+<!--            </article>-->
+<!--            <article id="match-history">-->
+
+<!--            </article>-->
+<!--        </section>-->
+<!--        <section class="user-img-rank rounded-corners">-->
+<!--            <div id="ranking-image">-->
+
+<!--            </div>-->
+<!--        </section>-->
+<!--        <section style="grid-column: 1 / span 2;" class="user-statistics-result rounded-corners">-->
+<!--            <h1 class="schedule-header">Estadistica</h1>-->
+<!--            <div id="statistics">-->
+
+<!--            </div>-->
+<!--        </section>-->
+<!--    </main>-->
 </body>
 
 </html>

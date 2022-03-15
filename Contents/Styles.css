@@ -6,6 +6,7 @@
 
 html, body {
     height: 100%;
+    width: 100vw;
 }
 
 p{
@@ -218,7 +219,8 @@ h2{
 }
 
 .logo{
-    border-radius: 50%;
+    margin: 1em;
+    width: 8em;
 }
 
 .title{
@@ -236,12 +238,37 @@ h2{
     grid-template-columns: 2fr 3fr 3fr;
 }
 
+.nav{
+    background-color: rgba(0,0,0,0.75);
+    border-radius: 1.5em;
+    padding: 0.5em;
+    width: 40%;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 1em;
+}
 
-.grid-nav{
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    padding-top: 5.625rem;
-    padding-left: 3.125rem;
+.user-header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.user-info-display {
+    background-color: #3c3956bf;
+}
+
+.user-info-display > div {
+    display:flex;
+}
+
+
+.content-section {
+    margin: 1em;
+    color: white;
+    background-color: #3c3956bf;
 }
 
 .center-statistics{
