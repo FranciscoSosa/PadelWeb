@@ -217,10 +217,6 @@ h2{
     grid-area: result;
 }
 
-.logo{
-    border-radius: 50%;
-}
-
 .title{
     margin-top: auto;
     border: 1px solid rgba(0, 0, 0, 0.8);
@@ -333,3 +329,61 @@ footer{
     margin-top: 5rem;
 }
 
+.user-header {
+    padding: 1em 0 1em 1em;
+    align-items: center;
+    display: flex;
+}
+
+.logo {
+    height: 90%;
+}
+
+.nav {
+    width: 40%;
+    background-color: rgba(0,0,0,0.75);
+    display: flex;
+    align-items: center;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    border-radius: 2em;
+    justify-content: space-around;
+    margin: 1em 1em 1em auto;
+}
+
+.user-aside {
+    background-color: #3C3956bf;
+    border-radius: 2em;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.user-aside img {
+    margin: 1em;
+}
+
+.user-info-display {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 2em;
+    padding: 1em;
+    margin: 1em;
+    background-color: #3C3956bf;
+}
+
+.user-info-display > p {
+    text-align: center;
+}
+
+.user-info-display > div {
+    display: flex;
+    flex-direction: row;
+}
+
+.user-info-display > div p:last-child {
+    margin-left: auto;
+}
