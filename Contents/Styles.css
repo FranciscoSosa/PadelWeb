@@ -249,9 +249,6 @@ h2 {
     margin-right: 1em;
 }
 
-.nav-mobile {
-    background-color: rgba(0, 0, 0, 0.75);
-}
 
 .user-header {
     display: flex;
@@ -403,8 +400,25 @@ footer {
     height: 100%;
 }
 
+.nav-mobile {
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobileNavbarBtn {
+    margin-right: 1em;
+    width: 8em;
+    height: 8em;
+}
+
+.user-rank-up-down-img {
+    width: 4em;
+}
+
 /* Medium */
-@media (max-width: 975px) {
+@media (max-width: 1225px) {
     .user-rank {
         font-size: 3em;
     }

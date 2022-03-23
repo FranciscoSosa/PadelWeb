@@ -13,7 +13,7 @@
 
 <body class="bg-image logged-user-image">
 <header class="user-header d-none d-md-flex">
-    <img class="logo" src="../../../images/logo.svg">
+    <img alt="logo" class="logo" src="../../../images/logo.svg">
     <nav class="nav col-5 col-md-7">
         <a><img src="../../../images/estadistica.png"></a>
         <a><img src="../../../images/partido.png"></a>
@@ -25,7 +25,8 @@
 
 <header class="d-md-none">
     <div class="nav-mobile user-header">
-        <img src="../../../images/logo.svg">
+        <img class="logo" src="../../../images/logo.svg">
+        <img class="mobileNavbarBtn" src="../../../images/mobileNavbarBtn.svg">
     </div>
 </header>
 
@@ -59,7 +60,7 @@
         </aside>
 
 
-        <div class="col-5 col-md-6">
+        <div class="col-12 col-lg-5 col-md-6 ">
             <div class=" row-full align-items-center justify-content-center">
                 <div class="content-section horizontal-flex">
                     <div class="col-4 img-container">
@@ -67,8 +68,10 @@
                              alt="Image showing this user current rank">
                     </div>
                     <span class="col user-rank">70 P</span>
-                    <img class="col-4 user-rank-up-down-img" src="../../../images/ranking-up-precedence.png"
-                         alt="Image showing whether this user is most likely to rank up or down in the moment">
+                    <div class="col-4 img-container">
+                        <img class="col-6 user-rank-up-down-img" src="../../../images/ranking-up-precedence.png"
+                             alt="Image showing whether this user is most likely to rank up or down in the moment">
+                    </div>
                 </div>
             </div>
             <div class="content-section vertical-flex">
