@@ -55,23 +55,23 @@ h2 {
 }
 
 .club-image {
-    background-image: url(../images/club.jpeg);
+    background-image: url(../../images/club.jpeg);
 }
 
 .user-image {
-    background-image: url(../images/user.jpeg);
+    background-image: url(../../images/user.jpeg);
 }
 
 .login-image {
-    background-image: url(../images/login.jpeg);
+    background-image: url(../../images/login.jpeg);
 }
 
 .logged-club-image {
-    background-image: url(../images/club-imagen.jpg);
+    background-image: url(../../images/club-imagen.jpg);
 }
 
 .logged-user-image {
-    background-image: url(../images/user-bg-imagen.jpg);
+    background-image: url(../../images/user-bg-imagen.jpg);
 }
 
 .bg-image {
