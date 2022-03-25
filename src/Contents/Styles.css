@@ -96,6 +96,7 @@ h2 {
 
 .rounded-corners {
     border-radius: .5rem;
+    margin-right: 25px;
 }
 
 .login-view-grid {
@@ -418,9 +419,62 @@ footer {
     width: 4em;
 }
 
+.newMenuStyle{
+    display: block !important;
+}
+
 /* Medium */
 @media (max-width: 1225px) {
     .user-rank {
         font-size: 3em;
     }
+
+    a img {
+        width: 4em;
+    }
+
+
 }
+
+@media (max-width: 720px){
+    .active {
+        display: inline !important;
+    }
+
+    .days-grid > label {
+        display:none;
+    }
+
+    .days-grid {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .logo{
+        width: 4em;
+    }
+
+    .mobileNavbarBtn{
+        width: 4em;
+    }
+
+}
+
+@media (max-width: 540px){
+
+    .user-header #logo_principal{
+        display: none ;
+    }
+
+    .user-header nav{
+            margin-top: 188px;
+            margin-right: 0px ;
+            border-radius: 0%;
+            width: auto;
+            height: auto;
+            z-index: 1;
+            position:absolute;
+    }
+}
+
