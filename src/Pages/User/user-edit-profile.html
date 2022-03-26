@@ -7,20 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../../Contents/Styles.css">
+
 </head>
 
 <body class="bg-image logged-user-image login-view-grid">
-    <header class="grid-header">
-        <img class="logo" src="../images/logo.png">
-        <div class="title">
-            <h1>EDITAR PERFIL</h1>
+    <header class="d-md-none">
+        <div class="nav-mobile user-header">
+            <img class="logo" src="../../../images/logo.svg">
+            <img onclick="empezar()" class="mobileNavbarBtn" src="../../../images/mobileNavbarBtn.svg" value="0">
         </div>
-        <nav class="grid-nav">
-            <a><img src="../../../images/estadistica.png"></a>
-            <a><img src="../../../images/partido.png"></a>
-            <a><img src="../../../images/torneo.png"></a>
-            <a><img src="../../../images/pendiente.png"></a>
-            <a><img src="../../../images/logOut.png"></a>
+    </header>
+
+    <header id="menu_principal" class="user-header d-none d-md-flex">
+        <img id="logo_principal" alt="logo" class="logo" src="../../../images/logo.svg">
+        <nav id="nav_principal" class="nav col-5 col-md-7">
+            <a href="/src/Pages/User/user-edit-profile.html"><img src="../../../images/personamenu.png"></a>
+            <a href="/src/Pages/User/user-statistics.html"><img src="../../../images/estadisticasmenu.png"></a>
+            <a href="/src/Pages/User/user-choose-day.html"><img src="../../../images/partidomenu.png"></a>
+            <a href="/src/Pages/User/user-tournaments.html"><img src="../../../images/torneomenu.png"></a>
+            <a href="/src/Pages/User/user-edit-profile.html"><img src="../../../images/pendientemenu.png"></a>
+            <a href="/src/Pages/HomePage/index.html"><img src="../../../images/logoutmenu.png"></a>
         </nav>
     </header>
 
@@ -44,7 +50,56 @@
                 <input type="submit" value="Confirmar Cambios"><br>
             </form>
         </section>
+
+
     </main>
+
+    <footer class="text-center text-lg-start bg-light text-muted mt-5">
+      <section class="" style="background-color: rgba(0, 0, 0, 0.75);">
+        <div class="container text-center text-md-start mt-5">
+          <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3"></i>Padeleros_Web
+              </h6>
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+            </div>
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">
+                Useful links
+              </h6>
+              <p>
+                  <a class="col">AVISO LEGAL</a>
+              </p>
+              <p>
+                  <a class="col" >POLITICA DE PRIVACIDAD</a>
+              </p>
+              <p>
+                  <a class="col"  href="/src/Pages/HomePage/frequent-questions.html">PREGUNTAS FRECUENTES</a>
+              </p>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">
+                Contact
+              </h6>
+              <p><i class="fas fa-home me-3"></i>Las Palmas de Gran Canarias, Gran Canarias.</p>
+              <p>
+                <i class="fas fa-envelope me-3"></i>
+                info@example.com
+              </p>
+              <p><i class="fas fa-phone me-3"></i> + 34 928 420 840</p>
+              <p><i class="fas fa-print me-3"></i> + 34 928 420 841</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center p-4" style="background-color:rgba(0, 0, 0, 0.75);">
+          © 2022 Padel:
+        </div>
+      </section>
+
+  </footer>
 </body>
 
 </html>

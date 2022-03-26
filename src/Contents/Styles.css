@@ -468,13 +468,16 @@ footer {
     }
 
     .user-header nav{
-            margin-top: 188px;
-            margin-right: 0px ;
+            margin-top: 75px;
             border-radius: 0%;
-            width: auto;
-            height: auto;
             z-index: 1;
             position:absolute;
     }
 }
 
+
+.mcbackgorund{
+    color: #FFFFFF;
+    background-color: rgb(60, 57, 86);
+    text-align: center;
+}
