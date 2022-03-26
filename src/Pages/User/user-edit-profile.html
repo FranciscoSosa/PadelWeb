@@ -12,10 +12,9 @@
 </head>
 
 <body class="bg-image logged-user-image">
-<header class="user-header">
-    <img class="logo" src="../../../images/logo.svg">
-
-    <nav class="nav">
+<header class="user-header d-none d-md-flex">
+    <img alt="logo" class="logo" src="../../../images/logo.svg">
+    <nav class="nav col-5 col-md-7">
         <a><img src="../../../images/estadistica.png"></a>
         <a><img src="../../../images/partido.png"></a>
         <a><img src="../../../images/torneo.png"></a>
@@ -24,38 +23,85 @@
     </nav>
 </header>
 
-<div>
-    <aside class="content-section col-2">
-        <img src="../../../images/user-profile-picture.svg">
-        <div class="user-info-display">
-            <p>Miguel Marco Gol</p>
-            <div>
-                <p>Partidos jugados:</p>
-                <p>16</p>
+<header class="d-md-none">
+    <div class="nav-mobile user-header">
+        <img class="logo" src="../../../images/logo.svg">
+        <img class="mobileNavbarBtn" src="../../../images/mobileNavbarBtn.svg">
+    </div>
+</header>
+
+<main class="container-fluid">
+    <div class="row">
+        <aside class="content-section col-2 mr-auto ml-auto d-none d-lg-flex vertical-flex">
+            <img class="user-profile-picture " src="../../../images/User-Profile-Picture.svg">
+            <div class="user-info-display content-section">
+                <p>Miguel Marco Gol</p>
+                <div>
+                    <p>Partidos jugados:</p>
+                    <p>16</p>
+                </div>
+                <div>
+                    <p>Partidos ganados:</p>
+                    <p>10</p>
+                </div>
+                <div>
+                    <p>Partidos perdidos:</p>
+                    <p>6</p>
+                </div>
+                <div>
+                    <p>Ranking:</p>
+                    <p>Oro</p>
+                </div>
+                <div>
+                    <p>Puntuación:</p>
+                    <p>18</p>
+                </div>
             </div>
-            <div>
-                <p>Partidos ganados:</p>
-                <p>10</p>
-            </div>
-            <div>
-                <p>Partidos perdidos:</p>
-                <p>6</p>
-            </div>
-            <div>
-                <p>Ranking:</p>
-                <p>Oro</p>
-            </div>
-            <div>
-                <p>Puntuación:</p>
-                <p>18</p>
-            </div>
+        </aside>
+
+        <div style="min-height: 50vh" class="content-section ml-auto mr-auto col-lg-9 col-10">
+            <form style="height:100%" class="vertical-flex">
+                <div class="user-edit-form container-fluid">
+                    <div class="row">
+                        <div class="col-md-3 col-12 m-auto">
+                            <label for="name">Nombre:</label>
+                        </div>
+                        <div class="col-md-7 col-12 m-auto">
+                            <input type="text" id="name">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-12 m-auto">
+                            <label for="surname">Apellido:</label>
+                        </div>
+                        <div class="col-md-7 col-12 m-auto">
+                            <input type="text" id="surname">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-12 m-auto">
+                            <label for="email">Email:</label>
+                        </div>
+                        <div class="col-md-7 col-12 m-auto">
+                            <input type="text" id="email">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-12 m-auto">
+                            <label for="phone">Teléfono:</label>
+                        </div>
+                        <div class="col-md-7 col-12 m-auto">
+                            <input type="text" id="phone">
+                        </div>
+                    </div>
+                </div>
+
+                <button class="user-edit-form">GUARDAR LOS CAMBIOS</button>
+            </form>
         </div>
-    </aside>
 
-    <main>
-
-    </main>
-</div>
+    </div>
+</main>
 
 </body>
 

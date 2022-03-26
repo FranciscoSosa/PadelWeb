@@ -272,6 +272,7 @@ h2 {
     background-color: #3c3956bf;
     margin-top: 1em;
     margin-bottom: 1em;
+    overflow: hidden;
 }
 
 .center-statistics {
@@ -361,6 +362,7 @@ footer {
 
 .user-profile-picture {
     width: 90%;
+    margin-top: 1em;
 }
 
 .user-rank {
@@ -423,9 +425,43 @@ footer {
     margin-bottom: 1em;
 }
 
+.user-edit-form {
+    font-weight: bold;
+    color: black;
+    border-radius: 1em;
+    background-color: #C4C4C47f;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+button.user-edit-form {
+    padding: 0.5em;
+}
+
+.user-edit-form input {
+    width: 100%;
+    background-color: #C4C4C47f;
+    border: 0;
+}
+
+aside.content-section {
+    font-size: 0.9em;
+}
+
 /* Medium */
 @media (max-width: 1225px) {
     .user-rank {
         font-size: 3em;
+    }
+}
+
+@media (max-width: 768px){
+    .logo {
+        width: 5em;
+    }
+
+    .mobileNavbarBtn {
+        width: 5em;
+        height: 5em;
     }
 }
