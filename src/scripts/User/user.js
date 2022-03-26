@@ -6,6 +6,7 @@ $(document).ready( () => {
             $("#aside-won-games").text(user.games_won);
             $("#aside-rank").text(user.rank);
             $("#aside-points").text(user.points);
+            $(".user-profile-picture").attr("src", user.img);
         })
     }
 )

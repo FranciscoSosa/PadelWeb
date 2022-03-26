@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../../Contents/Styles.css">
+    <script src="https://ajax.googleapis.com/ajax/
+libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../../scripts/User/user.js"></script>
 </head>
 
 <body class="bg-image logged-user-image login-view-grid">
@@ -24,11 +27,33 @@
         </nav>
     </header>
 
-    <aside class="login-view-sidebar sidebar-grid rounded-corners">
-        <div id="club-profile">
-
+    <aside class="content-section col-2 mr-auto ml-auto d-none d-lg-flex vertical-flex">
+        <img class="user-profile-picture">
+        <div class="user-info-display content-section">
+            <p id="aside-name"></p>
+            <div>
+                <p>Partidos jugados:</p>
+                <p id="aside-played-games"></p>
+            </div>
+            <div>
+                <p>Partidos ganados:</p>
+                <p id="aside-won-games"></p>
+            </div>
+            <div>
+                <p>Partidos perdidos:</p>
+                <p id="aside-lost-games"></p>
+            </div>
+            <div>
+                <p>Ranking:</p>
+                <p id="aside-rank"></p>
+            </div>
+            <div>
+                <p>Puntuación:</p>
+                <p id="aside-points"></p>
+            </div>
         </div>
     </aside>
+
 
     <main class="login-view-main rounded-corners center-child">
         <div class="confirm-result rounded-corners">
