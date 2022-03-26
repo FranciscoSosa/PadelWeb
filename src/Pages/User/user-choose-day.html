@@ -10,93 +10,157 @@
     <script src="https://ajax.googleapis.com/ajax/
 libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../../scripts/User/user.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
-<body class="bg-image logged-user-image login-view-grid">
-    <header class="grid-header">
-        <img class="logo" src="../../../images/logo.png">
-        <div class="title">
-            <h1>ESCOGER PARTIDO</h1>
+<body class=" bg-image logged-user-image">
+    
+    <header class="d-md-none">
+        <div class="nav-mobile user-header">
+            <img class="logo" src="../../../images/logo.svg">
+            <img onclick="empezar()" class="mobileNavbarBtn" src="../../../images/mobileNavbarBtn.svg" value="0">
         </div>
-        <nav class="grid-nav">
-            <a><img src="../../../images/estadistica.png"></a>
-            <a><img src="../../../images/partido.png"></a>
-            <a><img src="../../../images/torneo.png"></a>
-            <a><img src="../../../images/pendiente.png"></a>
-            <a><img src="../../../images/logOut.png"></a>
+    </header>
+
+    <header id="menu_principal" class="user-header d-none d-md-flex">
+        <img id="logo_principal"alt="logo" class="logo" src="../../../images/logo.svg">
+        <nav class="nav col-5 col-md-7">
+            <a href="/src/Pages/User/user-edit-profile.html"><img src="../../../images/personamenu.png"></a>
+            <a href="/src/Pages/User/user-statistics.html"><img src="../../../images/estadisticasmenu.png"></a>
+            <a href="/src/Pages/User/user-choose-day.html"><img src="../../../images/partidomenu.png"></a>
+            <a href="/src/Pages/User/user-tournaments.html"><img src="../../../images/torneomenu.png"></a>
+            <a href="/src/Pages/User/user-edit-profile.html"><img src="../../../images/pendientemenu.png"></a>
+            <a href="/src/Pages/HomePage/index.html"><img src="../../../images/logoutmenu.png"></a>
         </nav>
     </header>
 
-    <aside class="content-section col-2 mr-auto ml-auto d-none d-lg-flex vertical-flex">
-        <img class="user-profile-picture">
-        <div class="user-info-display content-section">
-            <p id="aside-name"></p>
-            <div>
-                <p>Partidos jugados:</p>
-                <p id="aside-played-games"></p>
-            </div>
-            <div>
-                <p>Partidos ganados:</p>
-                <p id="aside-won-games"></p>
-            </div>
-            <div>
-                <p>Partidos perdidos:</p>
-                <p id="aside-lost-games"></p>
-            </div>
-            <div>
-                <p>Ranking:</p>
-                <p id="aside-rank"></p>
-            </div>
-            <div>
-                <p>Puntuación:</p>
-                <p id="aside-points"></p>
-            </div>
-        </div>
-    </aside>
 
-    <main class="center-choose-days">
+    <div class="container-fluid">
+        <div class="row" style="margin: 25px;">
 
-        <form action="#" method="post">
-            <section class="user-days rounded-corners">
-
-
-                <h1 class="schedule-header">Selecciona el día</h1>
-
-                <div class="days-grid">
-                    <input type="checkbox" id="LUNES" name="LUNES" class="match-hour">
-                    <label for="LUNES">LUNES</label>
-                    <input type="checkbox" id="MARTES" name="MARTES" class="match-hour">
-                    <label for="MARTES">MARTES</label>
-                    <input type="checkbox" id="MIERCOLES" name="MIERCOLES" class="match-hour">
-                    <label for="MIERCOLES">MIERCOLES</label>
-                    <input type="checkbox" id="JUEVES" name="JUEVES" class="match-hour">
-                    <label for="JUEVES">JUEVES</label>
-                    <input type="checkbox" id="VIERNES" name="VIERNES" class="match-hour">
-                    <label for="VIERNES">VIERNES</label>
-                    <input type="checkbox" id="SABADO" name="SABADO" class="match-hour">
-                    <label for="SABADO">SABADO</label>
-                    <input type="checkbox" id="DOMINGO" name="DOMINGO" class="match-hour">
-                    <label for="DOMINGO">DOMINGO</label>
-                </div>
-
-
-            </section>
-            <section class="user-days rounded-corners">
-                <h1 class="schedule-header">Selecciona el club</h1>
-
-                <div id="club-selection">
-
-                </div>
-
-                <div class="add-match">
-                    <div class="add-match-submit center-child">
-                        <input type="submit" value="Buscar Partidos" class="rounded-corners">
+            <aside class="content-section col-2 mr-auto ml-auto d-none d-lg-flex vertical-flex">
+                <img class="user-profile-picture">
+                <div class="user-info-display content-section">
+                    <p id="aside-name"></p>
+                    <div>
+                        <p>Partidos jugados:</p>
+                        <p id="aside-played-games"></p>
+                    </div>
+                    <div>
+                        <p>Partidos ganados:</p>
+                        <p id="aside-won-games"></p>
+                    </div>
+                    <div>
+                        <p>Partidos perdidos:</p>
+                        <p id="aside-lost-games"></p>
+                    </div>
+                    <div>
+                        <p>Ranking:</p>
+                        <p id="aside-rank"></p>
+                    </div>
+                    <div>
+                        <p>Puntuación:</p>
+                        <p id="aside-points"></p>
                     </div>
                 </div>
-            </section>
-        </form>
+            </aside>
 
-    </main>
+            <main class="col-12 col-lg-9">
+    
+                <form>
+                    <section class="user-days rounded-corners row">
+    
+    
+                        <h1 class="schedule-header">Selecciona el día</h1>
+    
+                        <div id="days" class="days-grid horizontal-flex-hided">
+                            <button type="button" onclick="switchDay(false)" class="d-block d-sm-none d-xxl-none" value="0">Anterior</button>
+                            <input type="checkbox" id="LUNES" name="LUNES" class="match-hour">
+                            <label class="active" for="LUNES">LUNES</label>
+                            <input type="checkbox" id="MARTES" name="MARTES" class="match-hour">
+                            <label for="activeMARTES">MARTES</label>
+                            <input type="checkbox" id="MIERCOLES" name="MIERCOLES" class="match-hour">
+                            <label for="MIERCOLES">MIERCOLES</label>
+                            <input type="checkbox" id="JUEVES" name="JUEVES" class="match-hour">
+                            <label for="JUEVES">JUEVES</label>
+                            <input type="checkbox" id="VIERNES" name="VIERNES" class="match-hour">
+                            <label for="VIERNES">VIERNES</label>
+                            <input type="checkbox" id="SABADO" name="SABADO" class="match-hour">
+                            <label for="SABADO">SABADO</label>
+                            <input type="checkbox" id="DOMINGO" name="DOMINGO" class="match-hour">
+                            <label for="DOMINGO">DOMINGO</label>
+                            <button type="button" onclick="switchDay(true)" class="d-block d-sm-none d-xxl-none">Siguiente</button>
+                        </div>
+    
+    
+                    </section>
+                    <section class="user-days rounded-corners row">
+                        <h1 class="schedule-header">Selecciona el club</h1>
+    
+                        <div id="club-selection">
+                        
+                        </div>
+    
+                        <div class="add-match">
+                            <div class="add-match-submit center-child">
+                                <input type="submit" value="Buscar Partidos" class="rounded-corners">
+                            </div>
+                        </div>
+                    </section>
+                </form>
+    
+            </main>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </div>
+
 </body>
 
+<script>
+    function switchDay(next) {
+
+        const days = document.getElementById("days").querySelectorAll("label");
+        for(let i = 0; i < days.length; i++){
+    if(days[i].classList.contains("active")){
+        days[i].classList.remove("active");
+        
+        if(next){
+            if(i+1==7){
+                days[0].classList.add("active");
+                break;
+            }
+            days[i+1].classList.add("active")
+        }else{
+            if(i-1==-1){
+                days[6].classList.add("active");
+                break;
+            }
+            days[i-1].classList.add("active")
+        }
+        break;
+
+    }
+}
+
+    }
+
+    function empezar(){
+        var element = document.getElementById('menu_principal');
+        i = element.getAttribute("value");
+        if (i==null){
+            i=0
+        }
+        if (i==0){
+            element.classList.remove("d-none");
+            element.classList.remove("d-md-flex");
+            element.setAttribute("value","1");
+        }else{
+            element.classList.add("d-none");
+            element.classList.add("d-md-flex");
+            element.setAttribute("value","0");
+        }
+
+    }
+</script>
 </html>
+
