@@ -6,5 +6,18 @@
   "games_played": 16,
   "rank": "Oro",
   "points": 18,
-  "img": "../../../images/User-Profile-Picture.svg"
+  "img": "../../../images/User-Profile-Picture.svg",
+  "history" : [
+    "Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA",
+    "Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA",
+    "Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA",
+    "Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA",
+    "Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA",
+    "Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA",
+    "Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA",
+    "Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA",
+    "Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA",
+    "Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA",
+    "Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA"
+  ]
 }
