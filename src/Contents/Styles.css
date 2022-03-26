@@ -449,11 +449,13 @@ button.user-edit-form {
 
 aside.content-section {
     font-size: 0.9em;
+    height: 60%;
 }
   
 .newMenuStyle{
     display: block !important;
 }
+
 
 /* Medium */
 @media (max-width: 1225px) {
