@@ -14,8 +14,9 @@
         <h1 class="header-mb">Club</h1>
         <form action="#" method="post">
             <input type="text" name="name" id="name-id" placeholder="Nombre" required><br>
-            <input type="email" name="email" id="email-id" placeholder="Email" required><br>
-            <input type="tel" name="telephone" id="telephone-id" placeholder="Tlf" required><br>
+            <input type="email" name="email" id="email-id" 
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$" placeholder="Email" required><br>
+            <input type="tel" name="telephone" id="telephone-id" pattern="[1-9][0-9]{8}$" placeholder="Tlf" required><br>
             <input type="password" name="password" id="password-id" placeholder="Contraseña" required><br>
             <input type="submit" value="Crear cuenta" class="rounded-corners">
             <p>¿Ya tienes una cuenta? <a href="../HomePage/login.html">Iniciar sesión</a></p>
