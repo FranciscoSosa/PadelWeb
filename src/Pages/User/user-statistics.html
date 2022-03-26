@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../../../src/Contents/Styles.css">
+    <script src="https://ajax.googleapis.com/ajax/
+libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../../scripts/User/user.js"></script>
+    <script src="../../scripts/User/user-statistics.js"></script>
 </head>
 
 <body class="bg-image logged-user-image">
@@ -33,45 +37,37 @@
 
 <main class="container-fluid">
     <div class="row">
-        <aside class="content-section col-2 d-none d-lg-block">
-            <img class="user-profile-picture" src="../../../images/User-Profile-Picture.svg">
+        <aside class="content-section col-2 mr-auto ml-auto d-none d-lg-flex vertical-flex">
+            <img class="user-profile-picture">
             <div class="user-info-display content-section">
-                <p>Miguel Marco Gol</p>
+                <p id="aside-name"></p>
                 <div>
                     <p>Partidos jugados:</p>
-                    <p>16</p>
+                    <p id="aside-played-games"></p>
                 </div>
                 <div>
                     <p>Partidos ganados:</p>
-                    <p>10</p>
+                    <p id="aside-won-games"></p>
                 </div>
                 <div>
                     <p>Partidos perdidos:</p>
-                    <p>6</p>
+                    <p id="aside-lost-games"></p>
                 </div>
                 <div>
                     <p>Ranking:</p>
-                    <p>Oro</p>
+                    <p id="aside-rank"></p>
                 </div>
                 <div>
-                    <p>Puntuación:</p>    <header id="menu_principal" class="user-header d-none d-md-flex">
-                        <img id="logo_principal" alt="logo" class="logo" src="../../../images/logo.svg">
-                        <nav id="nav_principal" class="nav col-5 col-md-7">
-                            <a href="/src/Pages/User/user-edit-profile.html"><img src="../../../images/personamenu.png"></a>
-                            <a href="/src/Pages/User/user-statistics.html"><img src="../../../images/estadisticasmenu.png"></a>
-                            <a href="/src/Pages/User/user-choose-day.html"><img src="../../../images/partidomenu.png"></a>
-                            <a href="/src/Pages/User/user-tournaments.html"><img src="../../../images/torneomenu.png"></a>
-                            <a href="/src/Pages/User/user-edit-profile.html"><img src="../../../images/pendientemenu.png"></a>
-                            <a href="/src/Pages/HomePage/index.html"><img src="../../../images/logoutmenu.png"></a>
-                        </nav>
-                    </header>
-                    <p>18</p>
+                    <p>Puntuación:</p>
+                    <p id="aside-points"></p>
                 </div>
             </div>
         </aside>
 
 
-        <div class="col-12 col-lg-5 col-md-6 ">
+
+
+        <section class="order-1 order-md-1 order-lg-2 col-12 col-lg-4 col-md-6 ">
             <div class=" row-full align-items-center justify-content-center">
                 <div class="content-section horizontal-flex">
                     <div class="col-4 img-container">
@@ -85,22 +81,31 @@
                     </div>
                 </div>
             </div>
-            <div class="content-section vertical-flex">
+            <div id="match-history" class="content-section vertical-flex">
                 <h3 style="margin-top: .5em">Partidos anteriores</h3>
-                <div class="content-section match-info-display">
-                    Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA
-                </div>
-                <div class="content-section match-info-display">
-                    Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA
-                </div>
-                <div class="content-section match-info-display">
-                    Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA
-                </div>
-                <div class="content-section match-info-display">
-                    Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA
-                </div>
             </div>
-        </div>
+        </section>
+        <section class="order-2 col-12 col-md">
+            <div class="content-section vertical-flex">
+                <h1 class="space-updown">Tu progreso</h1>
+                <section class="horizontal-flex space-updown">
+                    <img src="../../../images/PieChart.svg">
+                    <h3>87% de victorias</h3>
+                </section>
+                <section class="text-align-center space-updown">
+                    <div class="img-container">
+                        <img src="../../../images/Graph.svg">
+                    </div>
+                    <h3>Frecuencia de juego</h3>
+                </section>
+                <section class="text-align-center space-updown">
+                    <div class="img-container">
+                        <img src="../../../images/Graph.svg">
+                    </div>
+                    <h3>Tu evolución</h3>
+                </section>
+            </div>
+        </section>
     </div>
 
 </main>
