@@ -493,6 +493,23 @@ aside.content-section {
         width: 4em;
     }
 
+    /* CLUB */
+    .schedule-grid{
+        display: grid;
+        justify-content: space-around;
+        align-items: center;
+        grid-template-rows: repeat(10, 2rem);
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .schedule-grid > label {
+        display:none;
+    }
+
+    .schedule-grid > span {
+        display: none;
+    }
+
 }
 
 @media (max-width: 768px){
