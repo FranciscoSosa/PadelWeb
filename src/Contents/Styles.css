@@ -450,8 +450,8 @@ button.user-edit-form {
 aside.content-section {
     font-size: 0.9em;
 }
-  
-.newMenuStyle{
+
+.newMenuStyle {
     display: block !important;
 }
 
@@ -468,13 +468,13 @@ aside.content-section {
 
 }
 
-@media (max-width: 720px){
+@media (max-width: 720px) {
     .active {
         display: inline !important;
     }
 
     .days-grid > label {
-        display:none;
+        display: none;
     }
 
     .days-grid {
@@ -483,17 +483,17 @@ aside.content-section {
         align-items: center;
     }
 
-    .logo{
+    .logo {
         width: 4em;
     }
 
-    .mobileNavbarBtn{
+    .mobileNavbarBtn {
         width: 4em;
     }
 
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
     .logo {
         width: 5em;
     }
@@ -502,21 +502,27 @@ aside.content-section {
         width: 5em;
         height: 5em;
     }
-}
-  
-@media (max-width: 540px){
 
-    .user-header #logo_principal{
-        display: none ;
+    .home-content-section {
+        border-radius: 2em;
+        border: black 2px solid;
+        margin: 3em;
+    }
+}
+
+@media (max-width: 540px) {
+
+    .user-header #logo_principal {
+        display: none;
     }
 
-    .user-header nav{
-            margin-top: 188px;
-            margin-right: 0px ;
-            border-radius: 0%;
-            width: auto;
-            height: auto;
-            z-index: 1;
-            position:absolute;
+    .user-header nav {
+        margin-top: 188px;
+        margin-right: 0px;
+        border-radius: 0%;
+        width: auto;
+        height: auto;
+        z-index: 1;
+        position: absolute;
     }
 }
