@@ -2,6 +2,7 @@
   "name": "Miguel",
   "surname": "Marco Gol",
   "email": "miguel.mg@gmail.com",
+  "passwd": "1234",
   "games_won": 10,
   "games_played": 16,
   "rank": "Oro",
