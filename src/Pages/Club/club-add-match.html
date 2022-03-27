@@ -30,7 +30,7 @@
         </nav>
     </header>
 
-    <main class="container-fluid">
+    <div class="container-fluid">
         <div class="row" style="margin: 25px;">
 
             <aside class="content-section col-2 mr-auto ml-auto d-none d-lg-flex vertical-flex">
@@ -52,10 +52,10 @@
                 </div>
             </aside>
 
-            <section class="login-view-main rounded-corners col-12 col-lg-9 mr-auto ml-auto">
+            <main class="login-view-main rounded-corners col-12 col-lg-9 mr-auto ml-auto">
                 <h1 class="schedule-header">Selecciona el horario</h1>
                 <form action="#" method="post">
-                    <div id="days" class="days-grid horizontal-flex-hided">
+                    <div id="days" class="days-grid horizontal-flex" style="text-align: center;">
                         <button type="button" onclick="switchDay(false)" class="d-block d-sm-none d-xxl-none" value="0">Anterior</button>
                         <div id="schedule" class="schedule-grid">
                             <span class="p-day active">
@@ -224,9 +224,9 @@
                         </div>
                     </div>
                 </form>
-            </section>
+            </main>
         </div>
-    </main>
+    </div>
     <footer class="row text-center text-lg-start bg-light text-muted mt-5">
         <section class="" style="background-color: rgba(0, 0, 0, 0.75);">
             <div class="container text-center text-md-start mt-5">

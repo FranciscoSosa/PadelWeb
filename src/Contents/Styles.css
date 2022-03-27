@@ -133,7 +133,6 @@ h2 {
 
 .login-view-main {
     grid-area: main;
-    margin: 4rem;
     background-color: rgb(196, 196, 196);
 }
 
