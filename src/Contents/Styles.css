@@ -539,6 +539,7 @@ aside.content-section {
 
 #contact-image {
     aspect-ratio: 16 / 9;
+    height: 15em;
 }
 
 .fphoto-cancha {
