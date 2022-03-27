@@ -8,7 +8,7 @@
   "rank": "Oro",
   "points": 18,
   "img": "../../../images/User-Profile-Picture.svg",
-  "history" : [
+  "history": [
     "Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA",
     "Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA",
     "Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA",
@@ -20,5 +20,25 @@
     "Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA",
     "Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA",
     "Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA"
+  ],
+  "matches": [
+    {
+      "img": "../../../images/match.svg",
+      "data": "10:30 - 12:30, Masc, Pista 1, Nivel Oro, Clasificatorio"
+    },
+    {
+      "img": "../../../images/match.svg",
+      "data": "12:30 - 14:30, Masc, Pista 2, Nivel Platino, Amistoso"
+    }
+  ],
+  "tournaments": [
+    {
+      "img": "../../../images/tournament.svg",
+      "data": "29/30 Masc, CLub de Pádel la Galera, 23/12/19"
+    },
+    {
+      "img": "../../../images/tournament.svg",
+      "data": "15/30 Masc, CLub de Pádel la Galera, 24/12/19"
+    }
   ]
 }

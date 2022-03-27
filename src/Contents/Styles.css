@@ -401,7 +401,7 @@ footer {
     text-align: center;
 }
 
-.pending-events{
+.pending-events {
     color: black;
     padding: 1em;
     width: 80%;
@@ -528,7 +528,7 @@ aside.content-section {
     }
 
     /* CLUB */
-    .schedule-grid{
+    .schedule-grid {
         display: grid;
         justify-content: space-around;
         align-items: center;
@@ -537,7 +537,7 @@ aside.content-section {
     }
 
     .schedule-grid > label {
-        display:none;
+        display: none;
     }
 
     .schedule-grid > span {
@@ -590,15 +590,7 @@ aside.content-section {
     height: 15em;
 }
 
-    .user-header nav{
-            margin-top: 75px;
-            border-radius: 0%;
-            z-index: 1;
-            position:absolute;
-    }
-}
-
-.mcbackgorund{
+.mcbackgorund {
     color: #FFFFFF;
     background-color: rgb(60, 57, 86);
     text-align: center;
