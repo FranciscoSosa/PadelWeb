@@ -391,6 +391,13 @@ footer {
     text-align: center;
 }
 
+.pending-events{
+    color: black;
+    padding: 1em;
+    width: 80%;
+    text-align: center;
+}
+
 .img-container {
     display: flex;
     justify-content: center;
