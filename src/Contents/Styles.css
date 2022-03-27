@@ -97,7 +97,6 @@ h2 {
 
 .rounded-corners {
     border-radius: .5rem;
-    margin-right: 25px;
 }
 
 .login-view-grid {
@@ -132,8 +131,6 @@ h2 {
 }
 
 .login-view-main {
-    grid-area: main;
-    margin: 4rem;
     background-color: rgb(196, 196, 196);
 }
 
@@ -404,6 +401,13 @@ footer {
     text-align: center;
 }
 
+.pending-events{
+    color: black;
+    padding: 1em;
+    width: 80%;
+    text-align: center;
+}
+
 .img-container {
     display: flex;
     justify-content: center;
@@ -459,11 +463,33 @@ button.user-edit-form {
 
 aside.content-section {
     font-size: 0.9em;
+    height: 60%;
 }
 
 .newMenuStyle {
     display: block !important;
 }
+
+.players-checkbox {
+    display: none
+}
+
+.players-checkbox:checked ~ .checkmark {
+    background-color: lightgreen;
+}
+
+.checkmark {
+    border-radius: 50%;
+    background-color: grey;
+    position: relative;
+    height: 1em;
+    width: 1em;
+    top: 0;
+    right: 0;
+    display: block;
+    margin-left: .5em;
+}
+
 
 /* Medium */
 @media (max-width: 1225px) {
@@ -499,6 +525,23 @@ aside.content-section {
 
     .mobileNavbarBtn {
         width: 4em;
+    }
+
+    /* CLUB */
+    .schedule-grid{
+        display: grid;
+        justify-content: space-around;
+        align-items: center;
+        grid-template-rows: repeat(10, 2rem);
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .schedule-grid > label {
+        display:none;
+    }
+
+    .schedule-grid > span {
+        display: none;
     }
 
 }
@@ -546,3 +589,18 @@ aside.content-section {
     aspect-ratio: 16 / 9;
     height: 15em;
 }
+
+    .user-header nav{
+            margin-top: 75px;
+            border-radius: 0%;
+            z-index: 1;
+            position:absolute;
+    }
+}
+
+.mcbackgorund{
+    color: #FFFFFF;
+    background-color: rgb(60, 57, 86);
+    text-align: center;
+}
+

@@ -1,0 +1,12 @@
+[
+  {
+    "email": "miguel.mg@gmail.com",
+    "passwd": "1234",
+    "type": "user"
+  },
+  {
+    "email": "tamaracit@gmail.com",
+    "passwd": "1234",
+    "type": "club"
+  }
+]

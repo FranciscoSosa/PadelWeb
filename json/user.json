@@ -1,0 +1,24 @@
+{
+  "name": "Miguel",
+  "surname": "Marco Gol",
+  "email": "miguel.mg@gmail.com",
+  "passwd": "1234",
+  "games_won": 10,
+  "games_played": 16,
+  "rank": "Oro",
+  "points": 18,
+  "img": "../../../images/User-Profile-Picture.svg",
+  "history" : [
+    "Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA",
+    "Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA",
+    "Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA",
+    "Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA",
+    "Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA",
+    "Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA",
+    "Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA",
+    "Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA",
+    "Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA",
+    "Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA",
+    "Miguel M, Jose A VS Antonio R, Rubén P || VICTORIA"
+  ]
+}
