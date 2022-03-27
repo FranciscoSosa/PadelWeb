@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../Contents/Styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../../scripts/Home/login.js"></script>
+</head>
+
+<body class="bg-image login-image center-child">
+    <div class="sign-log-menu rounded-corners">
+        <h1 class="header-mb">Iniciar sesión</h1>
+        <form id="login-form" method="post">
+            <input type="email" name="email" id="email-id" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$" placeholder="Email" required><br>
+            <input type="password" name="password" id="password-id" placeholder="Contraseña" required><br>
+            <input id="login-button" type="submit" value="Iniciar sesión" class="rounded-corners">
+            <p>¿No tiene una cuenta? <a href="#">Cree una</a></p>
+            <a href="#">Olvidó su Contraseña</a>
+        </form>
+    </div>
+</body>
+
+</html>

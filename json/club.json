@@ -1,0 +1,26 @@
+{
+    "id": 1,
+    "name": "CLub de Pádel la Galera",
+    "telephone": "777777777",
+    "courts": 20,
+    "location": "Un lugar",
+    "img": "../../../images/club-image.svg",
+    "pending": [
+        {
+            "img": "../../../images/match.svg",
+            "data": "10:30 - 12:30, Masc, Pista 1, Nivel Oro, Clasificatorio"
+        },
+        {
+            "img": "../../../images/match.svg",
+            "data": "10:30 - 12:30, Masc, Pista 2, Nivel Plata"
+        },
+        {
+            "img": "../../../images/match.svg",
+            "data": "10:30 - 12:30, Masc, Pista 4, Nivel Diamante, Clasificatorio"
+        },
+        {
+            "img": "../../../images/tournament.svg",
+            "data": "29/30 Masc, CLub de Pádel la Galera, 23/12/19"
+        }
+    ]
+}
