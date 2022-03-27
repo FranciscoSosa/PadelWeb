@@ -460,6 +460,26 @@ aside.content-section {
     display: block !important;
 }
 
+.players-checkbox {
+    display: none
+}
+
+.players-checkbox:checked ~ .checkmark {
+    background-color: lightgreen;
+}
+
+.checkmark {
+    border-radius: 50%;
+    background-color: grey;
+    position: relative;
+    height: 1em;
+    width: 1em;
+    top: 0;
+    right: 0;
+    display: block;
+    margin-left: .5em;
+}
+
 
 /* Medium */
 @media (max-width: 1225px) {

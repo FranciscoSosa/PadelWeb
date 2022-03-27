@@ -7,8 +7,11 @@ $(document).ready(() => {
         let number = 1;
         match.players.forEach(player => {
             playersDiv.append(`
-                    <label>${player}</label> <input type="checkbox" id="${playerId}-${number}" 
+                    <label for="${playerId}-${number}" class="horizontal-flex">${player}
+                        <input type="checkbox" id="${playerId}-${number}" 
                         name="${playerId}-${number}" class="players-checkbox"><br>
+                        <span class="checkmark"></span>
+                    </label>
             `);
             number++;
         });
