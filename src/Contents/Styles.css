@@ -97,7 +97,6 @@ h2 {
 
 .rounded-corners {
     border-radius: .5rem;
-    margin-right: 25px;
 }
 
 .login-view-grid {
@@ -132,7 +131,6 @@ h2 {
 }
 
 .login-view-main {
-    grid-area: main;
     background-color: rgb(196, 196, 196);
 }
 
@@ -393,6 +391,13 @@ footer {
     text-align: center;
 }
 
+.pending-events{
+    color: black;
+    padding: 1em;
+    width: 80%;
+    text-align: center;
+}
+
 .img-container {
     display: flex;
     justify-content: center;
@@ -453,6 +458,26 @@ aside.content-section {
   
 .newMenuStyle{
     display: block !important;
+}
+
+.players-checkbox {
+    display: none
+}
+
+.players-checkbox:checked ~ .checkmark {
+    background-color: lightgreen;
+}
+
+.checkmark {
+    border-radius: 50%;
+    background-color: grey;
+    position: relative;
+    height: 1em;
+    width: 1em;
+    top: 0;
+    right: 0;
+    display: block;
+    margin-left: .5em;
 }
 
 
