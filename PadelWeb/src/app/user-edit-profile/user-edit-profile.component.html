@@ -1,10 +1,11 @@
 <div class="logged-user-image main-container">
-  <!--  <app-user-header></app-user-header>-->
+  <!--  <app-types-header></app-types-header>-->
 
   <main class="container-fluid">
     <div class="row">
 
-      <app-user-aside class="col-2 mr-auto ml-auto d-none d-lg-flex"></app-user-aside>
+      <app-logged-aside infoUrl="assets/json/user.json"
+                        class="col-2 mr-auto ml-auto d-none d-lg-flex"></app-logged-aside>
 
       <div style="min-height: 50vh" class="content-section ml-auto mr-auto col-lg-9 col-10">
         <form style="height:100%" class="vertical-flex" (ngSubmit)="submit()" #userEditProfile="ngForm">
@@ -30,16 +31,26 @@
                 <label for="email">Email:</label>
               </div>
               <div class="col-md-7 col-12 m-auto">
-                <input type="text" id="email" [(ngModel)]="model.email" name="email">
+                <input type="text" id="email" [(ngModel)]="model.email" name="email" #email="ngModel"
+                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$">
               </div>
+            </div>
+            <div *ngIf="email.touched && email.errors?.['pattern']"
+                 class="formError row col-11 ml-auto mr-auto mt-1 mb-1">
+              ¡El email debe tener un formato válido!
             </div>
             <div class="row">
               <div class="col-md-3 col-12 m-auto">
                 <label for="phone">Teléfono:</label>
               </div>
               <div class="col-md-7 col-12 m-auto">
-                <input type="text" id="phone" [(ngModel)]="model.phone" name="phone">
+                <input type="text" id="phone" [(ngModel)]="model.phone" name="phone" #phone="ngModel"
+                       pattern="[1-9][0-9]{8}">
               </div>
+            </div>
+            <div *ngIf="phone.touched && phone.errors?.['pattern']"
+                 class="formError row col-11 ml-auto mr-auto mt-1 mb-1">
+              ¡El teléfono debe tener un formato válido!
             </div>
           </div>
 
