@@ -6,7 +6,7 @@ import {AppComponent} from './app.component';
 import {UserEditProfileComponent} from './user-edit-profile/user-edit-profile.component';
 import {FormsModule} from "@angular/forms";
 import {UserAsideComponent} from './user-aside/user-aside.component';
-import { UserHeaderComponent } from './Components/UserHeader/user-header/user-header.component';
+import { UserHeaderComponent } from './UserHeader/user-header/user-header.component';
 import {HttpClientModule} from "@angular/common/http";
 
 
