@@ -1,0 +1,46 @@
+<aside class="content-section">
+  <div *ngIf="userInfo" class="vertical-flex">
+    <img [src]="userInfo.img" class="user-profile-picture">
+    <div class="user-info-display content-section">
+      <p>{{ userInfo.name + ' ' + userInfo.surname }}</p>
+      <div>
+        <p>Partidos jugados:</p>
+        <p id="aside-played-games"> {{ userInfo.playedGames }} </p>
+      </div>
+      <div>
+        <p>Partidos ganados:</p>
+        <p id="aside-won-games"> {{ userInfo.wonGames }}</p>
+      </div>
+      <div>
+        <p>Partidos perdidos:</p>
+        <p id="aside-lost-games"> {{ userInfo.playedGames - userInfo.wonGames }}</p>
+      </div>
+      <div>
+        <p>Ranking:</p>
+        <p id="aside-rank">{{ userInfo.rank }}</p>
+      </div>
+      <div>
+        <p>Puntuación:</p>
+        <p id="aside-points">{{ userInfo.points }}</p>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="clubInfo" class="vertical-flex">
+    <img [src]="clubInfo.img" class="user-profile-picture">
+    <div class="user-info-display content-section">
+      <p id="aside-name">{{clubInfo.name}}</p>
+      <div>
+        <p>Teléfono:</p>
+        <p id="aside-telephone">{{clubInfo.telephone}}</p>
+      </div>
+      <div>
+        <p>Nº pistas:</p>
+        <p id="aside-courts">{{clubInfo.courts}}</p>
+      </div>
+      <div>
+        <p>Localización:</p>
+        <p id="aside-location">{{clubInfo.location}}</p>
+      </div>
+    </div>
+  </div>
+</aside>
