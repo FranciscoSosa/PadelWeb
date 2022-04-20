@@ -5,14 +5,14 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {UserEditProfileComponent} from './user-edit-profile/user-edit-profile.component';
 import {FormsModule} from "@angular/forms";
-import {UserAsideComponent} from './user-aside/user-aside.component';
+import {LoggedAsideComponent} from './logged-aside/logged-aside.component';
 import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
     AppComponent,
     UserEditProfileComponent,
-    UserAsideComponent
+    LoggedAsideComponent
   ],
   imports: [
     BrowserModule,
