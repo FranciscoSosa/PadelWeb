@@ -1,0 +1,56 @@
+<div class="logged-user-image main-container bg-image">
+  <main class="container-fluid">
+    <div class="row">
+
+      <app-logged-aside infoUrl="assets/json/user.json"
+                        class="col-2 mr-auto ml-auto d-none d-lg-block"></app-logged-aside>
+
+      <section class="order-1 order-md-1 order-lg-2 col-12 col-lg-4 col-md-6 ">
+        <div class=" row-full align-items-center justify-content-center">
+          <div class="content-section horizontal-flex">
+            <div class="col-4 img-container">
+              <img src="assets/images/rank_example.svg"
+                   alt="Image showing this user current rank">
+            </div>
+            <span class="col user-rank">{{ user.points }} P</span>
+            <div class="col-4 img-container">
+              <img class="col-6 user-rank-up-down-img" src="assets/images/ranking-up-precedence.png"
+                   alt="Image showing whether this user is most likely to rank up or down in the moment">
+            </div>
+          </div>
+        </div>
+        <div id="match-history" class="content-section vertical-flex">
+          <h3 style="margin-top: .5em">Partidos anteriores</h3>
+          <div *ngFor="let m of user.history" class="content-section match-info-display">
+            {{ m }}
+          </div>
+        </div>
+      </section>
+
+      <section class="order-2 col-12 col-md">
+        <div class="content-section vertical-flex">
+          <h1 class="space-updown">Tu progreso</h1>
+          <section class="horizontal-flex space-updown">
+            <img src="../../../images/PieChart.svg">
+            <h3>87% de victorias</h3>
+          </section>
+          <section class="text-align-center space-updown">
+            <div class="img-container">
+              <img src="../../../images/Graph.svg">
+            </div>
+            <h3>Frecuencia de juego</h3>
+          </section>
+          <section class="text-align-center space-updown">
+            <div class="img-container">
+              <img src="../../../images/Graph.svg">
+            </div>
+            <h3>Tu evolución</h3>
+          </section>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+
+</div>

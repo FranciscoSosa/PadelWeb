@@ -7,12 +7,14 @@ import {UserEditProfileComponent} from './user-edit-profile/user-edit-profile.co
 import {FormsModule} from "@angular/forms";
 import {LoggedAsideComponent} from './logged-aside/logged-aside.component';
 import {HttpClientModule} from "@angular/common/http";
+import { UserStatisticsComponent } from './user-statistics/user-statistics.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserEditProfileComponent,
-    LoggedAsideComponent
+    LoggedAsideComponent,
+    UserStatisticsComponent
   ],
   imports: [
     BrowserModule,
