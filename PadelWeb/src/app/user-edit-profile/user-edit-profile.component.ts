@@ -1,4 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import {  DataUserService } from 'src/app/services/data-user.service'
+
 
 @Component({
   selector: 'app-types-edit-profile',
@@ -14,7 +16,11 @@ export class UserEditProfileComponent implements OnInit {
     phone: ""
   }
 
-  constructor() {
+  constructor(private dbService:DataUserService){
+    this.dbService.getAllProducts()
+    .then(data => {
+      console.log(data);
+    });
   }
 
   ngOnInit(): void {
