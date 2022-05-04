@@ -1,5 +1,4 @@
 import { Component, OnInit} from '@angular/core';
-import {  DataUserService } from 'src/app/services/user.service'
 
 
 @Component({
@@ -16,7 +15,7 @@ export class UserEditProfileComponent implements OnInit {
     phone: ""
   }
 
-  constructor(private dbService:DataUserService){
+  constructor(){
 
   }
 
