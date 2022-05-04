@@ -9,6 +9,10 @@ import {LoggedAsideComponent} from './logged-aside/logged-aside.component';
 import {HttpClientModule} from "@angular/common/http";
 import { PendingEventsComponent } from './pending-events/pending-events.component';
 
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore'
+import { environment } from 'src/environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +24,9 @@ import { PendingEventsComponent } from './pending-events/pending-events.componen
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

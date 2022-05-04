@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+
 
 @Component({
   selector: 'app-types-edit-profile',
@@ -14,7 +15,8 @@ export class UserEditProfileComponent implements OnInit {
     phone: ""
   }
 
-  constructor() {
+  constructor(){
+
   }
 
   ngOnInit(): void {
