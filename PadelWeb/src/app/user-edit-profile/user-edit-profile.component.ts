@@ -1,5 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-import {  DataUserService } from 'src/app/services/data-user.service'
+import {  DataUserService } from 'src/app/services/user.service'
 
 
 @Component({
@@ -17,10 +17,7 @@ export class UserEditProfileComponent implements OnInit {
   }
 
   constructor(private dbService:DataUserService){
-    this.dbService.getAllProducts()
-    .then(data => {
-      console.log(data);
-    });
+
   }
 
   ngOnInit(): void {
