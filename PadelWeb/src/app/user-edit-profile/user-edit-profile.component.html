@@ -1,52 +1,40 @@
-<div class="logged-user-image main-container">
-  <!--  <app-user-header></app-user-header>-->
-
-  <main class="container-fluid">
-    <div class="row">
-
-      <app-user-aside class="col-2 mr-auto ml-auto d-none d-lg-flex"></app-user-aside>
-
-      <div style="min-height: 50vh" class="content-section ml-auto mr-auto col-lg-9 col-10">
-        <form style="height:100%" class="vertical-flex" (ngSubmit)="submit()" #userEditProfile="ngForm">
-          <div class="user-edit-form container-fluid">
-            <div class="row">
-              <div class="col-md-3 col-12 m-auto">
-                <label for="name">Nombre:</label>
-              </div>
-              <div class="col-md-7 col-12 m-auto">
-                <input type="text" id="name" [(ngModel)]="model.name" name="name">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-3 col-12 m-auto">
-                <label for="surname">Apellido:</label>
-              </div>
-              <div class="col-md-7 col-12 m-auto">
-                <input type="text" id="surname" [(ngModel)]="model.surname" name="surname">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-3 col-12 m-auto">
-                <label for="email">Email:</label>
-              </div>
-              <div class="col-md-7 col-12 m-auto">
-                <input type="text" id="email" [(ngModel)]="model.email" name="email">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-3 col-12 m-auto">
-                <label for="phone">Teléfono:</label>
-              </div>
-              <div class="col-md-7 col-12 m-auto">
-                <input type="text" id="phone" [(ngModel)]="model.phone" name="phone">
-              </div>
-            </div>
-          </div>
-
-          <button class="user-edit-form">GUARDAR LOS CAMBIOS</button>
-        </form>
+<div style="min-height: 50vh" class="content-section">
+  <form style="height:100%" class="vertical-flex" (ngSubmit)="submit()" #userEditProfile="ngForm">
+    <div class="user-edit-form container-fluid">
+      <div class="row">
+        <div class="col-md-3 col-12 m-auto">
+          <label for="name">Nombre:</label>
+        </div>
+        <div class="col-md-7 col-12 m-auto">
+          <input type="text" id="name" [(ngModel)]="model.name" name="name">
+        </div>
       </div>
-
+      <div class="row">
+        <div class="col-md-3 col-12 m-auto">
+          <label for="surname">Apellido:</label>
+        </div>
+        <div class="col-md-7 col-12 m-auto">
+          <input type="text" id="surname" [(ngModel)]="model.surname" name="surname">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-12 m-auto">
+          <label for="email">Email:</label>
+        </div>
+        <div class="col-md-7 col-12 m-auto">
+          <input type="text" id="email" [(ngModel)]="model.email" name="email">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-12 m-auto">
+          <label for="phone">Teléfono:</label>
+        </div>
+        <div class="col-md-7 col-12 m-auto">
+          <input type="text" id="phone" [(ngModel)]="model.phone" name="phone">
+        </div>
+      </div>
     </div>
-  </main>
+
+    <button class="user-edit-form">GUARDAR LOS CAMBIOS</button>
+  </form>
 </div>

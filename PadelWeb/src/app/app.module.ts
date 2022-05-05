@@ -7,12 +7,14 @@ import {UserEditProfileComponent} from './user-edit-profile/user-edit-profile.co
 import {FormsModule} from "@angular/forms";
 import {UserAsideComponent} from './user-aside/user-aside.component';
 import {HttpClientModule} from "@angular/common/http";
+import { MainUserComponent } from './main-user/main-user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserEditProfileComponent,
-    UserAsideComponent
+    UserAsideComponent,
+    MainUserComponent
   ],
   imports: [
     BrowserModule,

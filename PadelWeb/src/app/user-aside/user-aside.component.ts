@@ -6,7 +6,7 @@ import {Observable} from "rxjs";
 @Component({
   selector: 'app-user-aside',
   templateUrl: './user-aside.component.html',
-  styleUrls: ['./user-aside.component.css']
+  styleUrls: ['../../styles.css']
 })
 export class UserAsideComponent implements OnInit {
 
