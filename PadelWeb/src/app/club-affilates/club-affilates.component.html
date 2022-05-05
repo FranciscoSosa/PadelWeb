@@ -1,0 +1,11 @@
+<app-header></app-header>
+<h2>Nuestros Clubs</h2>
+<div class="container" *ngFor="let clubs of ClubAffilate">
+  <img class="fphoto-cancha" [src]="clubs.URL" alt="club">
+  <p>{{clubs.Nombre}}</p>
+  <p>{{clubs.Direccion}}</p>
+  <p>{{clubs.Descripcion}}</p>
+  <hr>
+</div>
+<app-foother></app-foother>
+

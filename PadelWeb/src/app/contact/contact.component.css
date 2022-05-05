@@ -1,0 +1,18 @@
+.text-align-center {
+  text-align: center;
+}
+
+.center-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  margin-bottom: 1em;
+}
+
+h2 {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}

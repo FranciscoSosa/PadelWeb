@@ -9,6 +9,11 @@ import {LoggedAsideComponent} from './logged-aside/logged-aside.component';
 import {HttpClientModule} from "@angular/common/http";
 import { PendingEventsComponent } from './pending-events/pending-events.component';
 import { FootherComponent } from './foother/foother.component';
+import { ClubAffilatesComponent } from './club-affilates/club-affilates.component';
+import { HeaderComponent } from './header/header.component';
+import { WhoAreWeComponent } from './who-are-we/who-are-we.component';
+import { FAQComponent } from './faq/faq.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +21,12 @@ import { FootherComponent } from './foother/foother.component';
     UserEditProfileComponent,
     PendingEventsComponent,
     LoggedAsideComponent,
-    FootherComponent
+    FootherComponent,
+    ClubAffilatesComponent,
+    HeaderComponent,
+    WhoAreWeComponent,
+    FAQComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
