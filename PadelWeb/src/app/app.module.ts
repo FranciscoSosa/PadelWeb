@@ -8,13 +8,15 @@ import {FormsModule} from "@angular/forms";
 import {LoggedAsideComponent} from './logged-aside/logged-aside.component';
 import {HttpClientModule} from "@angular/common/http";
 import { PendingEventsComponent } from './pending-events/pending-events.component';
+import { FootherComponent } from './foother/foother.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserEditProfileComponent,
     PendingEventsComponent,
-    LoggedAsideComponent
+    LoggedAsideComponent,
+    FootherComponent
   ],
   imports: [
     BrowserModule,
