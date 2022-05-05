@@ -8,13 +8,15 @@ import {FormsModule} from "@angular/forms";
 import {UserAsideComponent} from './user-aside/user-aside.component';
 import {HttpClientModule} from "@angular/common/http";
 import { MainUserComponent } from './main-user/main-user.component';
+import { UserStatisticsComponent } from './user-statistics/user-statistics.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserEditProfileComponent,
     UserAsideComponent,
-    MainUserComponent
+    MainUserComponent,
+    UserStatisticsComponent
   ],
   imports: [
     BrowserModule,

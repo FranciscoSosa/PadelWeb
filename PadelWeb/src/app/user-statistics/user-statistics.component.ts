@@ -1,17 +1,19 @@
 import {Component, OnInit} from '@angular/core';
+import {environment} from "../../environments/environment";
 import {User} from "../user/user";
 import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
 
 @Component({
-  selector: 'app-user-aside',
-  templateUrl: './user-aside.component.html',
-  styleUrls: ['./user-aside.component.css']
+  selector: 'app-user-statistics',
+  templateUrl: './user-statistics.component.html',
+  styleUrls: ['./user-statistics.component.css'],
+  host: {
+    class: environment.userPageLayout
+  }
 })
-export class UserAsideComponent implements OnInit {
+export class UserStatisticsComponent implements OnInit {
 
   userInfo!: User;
-  imgURL: string = "assets/images/user-profile-picture.svg";
 
   constructor(private http: HttpClient) {
   }

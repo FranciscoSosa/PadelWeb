@@ -1,11 +1,12 @@
 import {Component, OnInit} from '@angular/core';
+import {environment} from "../../environments/environment";
 
 @Component({
   selector: 'app-user-edit-profile',
   templateUrl: './user-edit-profile.component.html',
-  styleUrls: ['../../styles.css'],
+  styleUrls: ['./user-edit-profile.component.css'],
   host: {
-    class: 'content-section ml-auto mr-auto col-lg-9 col-10'
+    class: environment.userPageLayout
   }
 })
 export class UserEditProfileComponent implements OnInit {

@@ -1,0 +1,6 @@
+@import "../../styles.css";
+
+form.vertical-flex {
+  padding-left: 2em;
+  padding-right: 2em;
+}
