@@ -16,6 +16,7 @@ import { environment } from 'src/environments/environment';
 
 import { LoggedAsideComponent } from './logged-aside/logged-aside.component';
 import { PendingEventsComponent } from './pending-events/pending-events.component';
+import { ClubHeaderComponent } from './UserHeader/club-header/club-header.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { PendingEventsComponent } from './pending-events/pending-events.componen
     UserEditProfileComponent,
     UserHeaderComponent,
     PendingEventsComponent,
-    LoggedAsideComponent
+    LoggedAsideComponent,
+    ClubHeaderComponent
   ],
   imports: [
     BrowserModule,
