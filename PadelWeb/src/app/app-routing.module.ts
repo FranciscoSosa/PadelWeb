@@ -7,6 +7,8 @@ import {MainUserComponent} from "./main-user/main-user.component";
 import {UserStatisticsComponent} from "./user-statistics/user-statistics.component";
 import { MainClubComponent } from './main-club/main-club.component';
 import { ClubEditProfileComponent } from './club-edit-profile/club-edit-profile.component';
+import { ClubConfirmMatchComponent } from './club-confirm-match/club-confirm-match.component';
+import { ClubConfirmTournamentComponent } from './club-confirm-tournament/club-confirm-tournament.component';
 
 const routes: Routes = [
   {
@@ -35,6 +37,14 @@ const routes: Routes = [
       {
         path: "profile",
         component: ClubEditProfileComponent
+      },
+      {
+        path: "confirm-match",
+        component: ClubConfirmMatchComponent
+      },
+      {
+        path: "confirm-tournament",
+        component: ClubConfirmTournamentComponent
       }
     ]
   }

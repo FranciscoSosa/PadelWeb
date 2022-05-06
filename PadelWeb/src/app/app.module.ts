@@ -21,6 +21,8 @@ import { PendingEventsComponent } from './pending-events/pending-events.componen
 import { ClubHeaderComponent } from './UserHeader/club-header/club-header.component';
 import { MainClubComponent } from './main-club/main-club.component';
 import { ClubEditProfileComponent } from './club-edit-profile/club-edit-profile.component';
+import { ClubConfirmMatchComponent } from './club-confirm-match/club-confirm-match.component';
+import { ClubConfirmTournamentComponent } from './club-confirm-tournament/club-confirm-tournament.component';
 
 
 @NgModule({
@@ -34,7 +36,9 @@ import { ClubEditProfileComponent } from './club-edit-profile/club-edit-profile.
     LoggedAsideComponent,
     ClubHeaderComponent,
     MainClubComponent,
-    ClubEditProfileComponent
+    ClubEditProfileComponent,
+    ClubConfirmMatchComponent,
+    ClubConfirmTournamentComponent
   ],
   imports: [
     BrowserModule,
