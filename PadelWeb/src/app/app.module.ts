@@ -8,6 +8,7 @@ import {FormsModule} from "@angular/forms";
 import {LoggedAsideComponent} from './logged-aside/logged-aside.component';
 import {HttpClientModule} from "@angular/common/http";
 import { MainUserComponent } from './main-user/main-user.component';
+import { UserStatisticsComponent } from './user-statistics/user-statistics.component';
 import { PendingEventsComponent } from './pending-events/pending-events.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore'
@@ -17,6 +18,7 @@ import { environment } from 'src/environments/environment';
   declarations: [
     AppComponent,
     UserEditProfileComponent,
+    UserStatisticsComponent,
     MainUserComponent,
     PendingEventsComponent,
     LoggedAsideComponent

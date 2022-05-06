@@ -400,6 +400,7 @@ footer {
   padding: 1em;
   width: 80%;
   text-align: center;
+  border-radius: 1em;
 }
 
 .pending-events {
@@ -450,6 +451,13 @@ footer {
   background-color: #C4C4C47f;
   padding-top: 2em;
   padding-bottom: 2em;
+}
+
+.vertical-flex-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
 }
 
 button.user-edit-form {
