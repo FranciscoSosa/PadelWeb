@@ -27,9 +27,10 @@
 }
 
 .mobileNavbarBtn {
-    margin-right: 1em;
+    margin-right: 2em;
     width: 5em;
     height: 8em;
+    cursor: pointer;
 }
 
 @media (max-width: 992px) {
@@ -42,11 +43,42 @@
     }
 
     .lognav{
-        width:  auto;
-        height: auto;
+        max-width:  100px;
+        max-height: 100px;
+        padding: 10px;
     }
 
+    .user-header{
+        padding: 10px;
+    }
+}
 
+.navmini{
+    width: 100%;
+    height: 80%;
+    margin-top: 148px;
+    padding: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    position:absolute;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.80);
+    color: white;
+    text-align: center;
+}
 
+.margin-auto {
+    display: flex;
+    height: 100px;
+    width: 100px;
+}
 
+.margin-auto__content{
+    margin: auto;
+}
+
+.hoverNav:hover{
+    background-color: rgba(0, 0, 0, 0.70);
+    cursor: pointer;
 }

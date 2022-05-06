@@ -1,18 +1,17 @@
-<header class="container-fluid">
-    <div class="d-md-none row">
+  <header class="container-fluid">
+    <div class="d-md-none row" style="z-index: 4;">
         <div class="nav-mobile user-header">
             <img class="logo" src="../../../../assets/images/user-header-images/logo.svg">
-            <img class="mobileNavbarBtn" src="../../../../assets/images/user-header-images/mobileNavbarBtn.svg" >
-            <!-- <img (click)="dropdown()" class="mobileNavbarBtn" src="../../../../assets/images/user-header-images/mobileNavbarBtn.svg" > -->
+            <img (click)="showNav()" class="mobileNavbarBtn" src="../../../../assets/images/user-header-images/mobileNavbarBtn.svg" >
         </div>
-        <div class="row">
+        <div class="row navmini" *ngIf="show">
             <nav>
-                <div class="row"><img class="lognav col" src="../../../../assets/images/user-header-images/personamenu.png"><p class="col">Perfil</p></div>
-                <div class="row"><img class="lognav col" src="../../../../assets/images/user-header-images/estadisticasmenu.png"><p class="col">Estadisticas</p></div>
-                <div class="row"><img class="lognav col" src="../../../../assets/images/user-header-images/partidomenu.png"><p class="col">Agregarse a Partidos</p></div>
-                <div class="row"><img class="lognav col" src="../../../../assets/images/user-header-images/torneomenu.png"><p class="col">Agregarse a Torneos</p></div>
-                <div class="row"><img class="lognav col" src="../../../../assets/images/user-header-images/pendientemenu.png"><p class="col">Mis Partidos</p></div>
-                <div class="row"><img class="lognav col" src="../../../../assets/images/user-header-images/logoutmenu.png"><p class="col">Log Out</p></div>
+                <div class="row hoverNav"><img class="lognav col" src="../../../../assets/images/user-header-images/personamenu.png"><div class="col margin-auto"><span class="margin-auto__content">Perfil</span></div></div>
+                <div class="row hoverNav"><img class="lognav col" src="../../../../assets/images/user-header-images/estadisticasmenu.png"><div class="col margin-auto"><span class="margin-auto__content">Estadisticas</span></div></div>
+                <div class="row hoverNav"><img class="lognav col" src="../../../../assets/images/user-header-images/partidomenu.png"><div class="col margin-auto"><span class="margin-auto__content">Agregarse a Partidos</span></div></div>
+                <div class="row hoverNav"><img class="lognav col" src="../../../../assets/images/user-header-images/torneomenu.png"><div class="col margin-auto"><span class="margin-auto__content">Agregarse a Torneos</span></div></div>
+                <div class="row hoverNav"><img class="lognav col" src="../../../../assets/images/user-header-images/pendientemenu.png"><div class="col margin-auto"><span class="margin-auto__content">Mis Partidos</span></div></div>
+                <div class="row hoverNav"><img class="lognav col" src="../../../../assets/images/user-header-images/logoutmenu.png"><div class="col margin-auto"><span class="margin-auto__content">Log Out</span></div></div>
             </nav>
         </div>
     </div>
