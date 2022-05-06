@@ -4,7 +4,15 @@
 
 export const environment = {
   production: false,
-  userPageLayout: 'ml-auto mr-auto col-lg-10 col-10'
+  userPageLayout: 'ml-auto mr-auto col-lg-10 col-10',
+  firebase : {
+    apiKey: "AIzaSyC87S7gX3rKRqzAlfZHM6hwg43dtUXuovg",
+    authDomain: "pwm-padel.firebaseapp.com",
+    projectId: "pwm-padel",
+    storageBucket: "pwm-padel.appspot.com",
+    messagingSenderId: "48236977559",
+    appId: "1:48236977559:web:bb57cdefbf642d817338d2"
+  },
 };
 
 /*

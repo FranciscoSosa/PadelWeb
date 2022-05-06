@@ -5,24 +5,31 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {UserEditProfileComponent} from './user-edit-profile/user-edit-profile.component';
 import {FormsModule} from "@angular/forms";
-import {UserAsideComponent} from './user-aside/user-aside.component';
+import {LoggedAsideComponent} from './logged-aside/logged-aside.component';
 import {HttpClientModule} from "@angular/common/http";
 import { MainUserComponent } from './main-user/main-user.component';
 import { UserStatisticsComponent } from './user-statistics/user-statistics.component';
+import { PendingEventsComponent } from './pending-events/pending-events.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore'
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserEditProfileComponent,
-    UserAsideComponent,
+    UserStatisticsComponent,
     MainUserComponent,
-    UserStatisticsComponent
+    PendingEventsComponent,
+    LoggedAsideComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

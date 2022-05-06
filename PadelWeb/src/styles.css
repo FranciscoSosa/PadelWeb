@@ -253,7 +253,7 @@ h2 {
   background-color: rgba(0, 0, 0, 0);
 }
 
-.home-nav span > a {;
+.home-nav span > a {
   text-decoration: none;
   color: black;
   font-weight: bold;
@@ -472,7 +472,6 @@ button.user-edit-form {
 
 aside.content-section {
   font-size: 0.9em;
-  height: 60%;
 }
 
 .newMenuStyle {
