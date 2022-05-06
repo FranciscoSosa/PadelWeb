@@ -9,6 +9,9 @@ import { UserHeaderComponent } from './UserHeader/user-header/user-header.compon
 
 import {HttpClientModule} from "@angular/common/http";
 
+import { MainUserComponent } from './main-user/main-user.component';
+import { UserStatisticsComponent } from './user-statistics/user-statistics.component';
+import { PendingEventsComponent } from './pending-events/pending-events.component';
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore'
@@ -24,6 +27,8 @@ import { ClubHeaderComponent } from './UserHeader/club-header/club-header.compon
     AppComponent,
     UserEditProfileComponent,
     UserHeaderComponent,
+    UserStatisticsComponent,
+    MainUserComponent,
     PendingEventsComponent,
     LoggedAsideComponent,
     ClubHeaderComponent

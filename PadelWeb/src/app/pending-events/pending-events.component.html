@@ -1,14 +1,17 @@
-<h1>Eventos pendientes</h1>
 
-<app-club-header></app-club-header>
-
-<main class="col-lg-8 offset-lg-1 login-view-main rounded-corners">
-    <section>
-        <div class="content-section pending-events" *ngFor="let event of pendingEvents">
-            <span>
-                <img [src]="event.img" alt="">
-                {{event.data}}
-            </span>
-        </div>
-    </section>
-</main>
+<div class="container-fluid">
+    <div class="row" style="margin: 25px;">
+        <app-logged-aside infoUrl="assets/json/club.json"
+                                class="col-2 mr-auto ml-auto d-none d-lg-flex"></app-logged-aside>
+        <main class="col-lg-8 offset-lg-1 login-view-main rounded-corners">
+            <section>
+                <div class="content-section pending-events" *ngFor="let event of pendingEvents">
+                    <span>
+                        <img [src]="event.img" alt="">
+                        {{event.data}}
+                    </span>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>

@@ -4,7 +4,7 @@
     "telephone": "777777777",
     "courts": 20,
     "location": "Un lugar",
-    "img": "../../../images/club-image.svg",
+    "img": "../../assets/images/club-image.svg",
     "pending": [
         {
             "img": "../../assets/images/match.svg",
