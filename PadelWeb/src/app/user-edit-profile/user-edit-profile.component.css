@@ -1,6 +1,12 @@
+@import "../../styles.css";
+
 .formError {
   background-color: rgba(255, 0, 0, 0.55);
   padding: 0.5em;
   border-radius: 1em;
-  /*background-color: red;*/
+}
+
+form.vertical-flex {
+  padding-left: 1em;
+  padding-right: 1em;
 }
