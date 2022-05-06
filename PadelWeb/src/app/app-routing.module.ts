@@ -5,6 +5,8 @@ import { PendingEventsComponent } from './pending-events/pending-events.componen
 import {UserEditProfileComponent} from "./user-edit-profile/user-edit-profile.component";
 import {MainUserComponent} from "./main-user/main-user.component";
 import {UserStatisticsComponent} from "./user-statistics/user-statistics.component";
+import { MainClubComponent } from './main-club/main-club.component';
+import { ClubEditProfileComponent } from './club-edit-profile/club-edit-profile.component';
 
 const routes: Routes = [
   {
@@ -23,6 +25,16 @@ const routes: Routes = [
       {
         path: "statistics",
         component: UserStatisticsComponent
+      }
+    ],
+  },
+  {
+    path: "club",
+    component: MainClubComponent,
+    children: [
+      {
+        path: "profile",
+        component: ClubEditProfileComponent
       }
     ]
   }
