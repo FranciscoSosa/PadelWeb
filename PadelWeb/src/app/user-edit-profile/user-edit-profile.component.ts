@@ -1,7 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+
 
 @Component({
-  selector: 'app-user-edit-profile',
+  selector: 'app-types-edit-profile',
   templateUrl: './user-edit-profile.component.html',
   styleUrls: ['./user-edit-profile.component.css']
 })
@@ -14,7 +15,8 @@ export class UserEditProfileComponent implements OnInit {
     phone: ""
   }
 
-  constructor() {
+  constructor(){
+
   }
 
   ngOnInit(): void {
