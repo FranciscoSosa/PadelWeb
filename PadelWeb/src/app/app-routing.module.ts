@@ -7,6 +7,7 @@ import {ClubAffilatesComponent} from "./club-affilates/club-affilates.component"
 import {WhoAreWeComponent} from "./who-are-we/who-are-we.component";
 import {FAQComponent} from "./faq/faq.component";
 import {ContactComponent} from "./contact/contact.component";
+import {HomeComponent} from "./home/home.component";
 
 const routes: Routes = [
   {
@@ -32,7 +33,12 @@ const routes: Routes = [
   {
     path: "contact",
     component:ContactComponent
+  },
+  {
+    path: "home",
+    component: HomeComponent
   }
+
 ];
 
 @NgModule({
