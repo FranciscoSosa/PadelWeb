@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {environment} from "../../environments/environment";
-import {User} from "../user/user";
+import {User} from "../types/user";
 import {HttpClient} from "@angular/common/http";
 
 @Component({
