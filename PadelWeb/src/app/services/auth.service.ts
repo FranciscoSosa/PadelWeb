@@ -9,12 +9,12 @@ import { User } from '../types/user';
 })
 export class AuthService {
 
-  _user!: Observable<User | undefined>;
+  user$!: Observable<User | undefined>;
 
   constructor(private afAuth: AngularFireAuth,
               private afs: AngularFirestore)
   {
-    this._user = this.afAuth.authState.pipe(
+    this.user$ = this.afAuth.authState.pipe(
       switchMap(user => {
         if(user){
           return this.afs.doc<User>(`User/${user.uid}`).valueChanges();
