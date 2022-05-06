@@ -1,4 +1,8 @@
 export interface Tournament {
-  data: string,
-  img: string
+  id?: string,
+  name: string,
+  day: Date,
+  players: number,
+  ranked: boolean,
+  comments: string,
 }
