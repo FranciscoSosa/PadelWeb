@@ -6,63 +6,39 @@
                 Anterior
             </button>
             <div id="schedule" class="schedule-grid">
-                <span class="p-day active">
+                <span [class.hidden]="0 !== currentDay" class="p-day">
                     <p>Lunes</p>
                 </span>
-                <span class="p-day">
+                <span [class.hidden]="1 !== currentDay" class="p-day">
                     <p>Martes</p>
                 </span>
-                <span class="p-day">
+                <span [class.hidden]="2 !== currentDay" class="p-day">
                     <p>Miércoles</p>
                 </span>
-                <span class="p-day">
+                <span [class.hidden]="3 !== currentDay" class="p-day">
                     <p>Jueves</p>
                 </span>
-                <span class="p-day">
+                <span [class.hidden]="4 !== currentDay" class="p-day">
                     <p>Viernes</p>
                 </span>
-                <span class="p-day">
+                <span [class.hidden]="5 !== currentDay" class="p-day">
                     <p>Sábado</p>
                 </span>
-                <span class="p-day">
+                <span [class.hidden]="6 !== currentDay" class="p-day">
                     <p>Domingo</p>
                 </span>
-                <div *ngFor="let day of daysPerWeekIndices">
-                    <input type="checkbox" name="Start-8-{{day}}" [(ngModel)]="selectedDays[0][day]" id="Start-8-{{day}}" class="match-hour">
-                    <label [class.hidden]="day !== currentDay" for="Start-8-{{day}}">08:30/10:00</label>
-                </div>
-                <div *ngFor="let day of daysPerWeekIndices">
-                    <input type="checkbox" name="Start-10-{{day}}" [(ngModel)]="selectedDays[1][day]" id="Start-10-{{day}}" class="match-hour">
-                    <label [class.hidden]="day !== currentDay" for="Start-10-{{day}}">10:00/11:30</label>
-                </div>
-                <div *ngFor="let day of daysPerWeekIndices">
-                    <input type="checkbox" name="Start-11-{{day}}" [(ngModel)]="selectedDays[2][day]" id="Start-11-{{day}}" class="match-hour">
-                    <label [class.hidden]="day !== currentDay" for="Start-11-{{day}}">11:30/13:00</label>
-                </div>
-                <div *ngFor="let day of daysPerWeekIndices">
-                    <input type="checkbox" name="Start-13-{{day}}" [(ngModel)]="selectedDays[3][day]" id="Start-13-{{day}}" class="match-hour">
-                    <label [class.hidden]="day !== currentDay" for="Start-13-{{day}}">13:00/14:30</label>
-                </div>
-                <div *ngFor="let day of daysPerWeekIndices">
-                    <input type="checkbox" name="Start-14-{{day}}" [(ngModel)]="selectedDays[4][day]" id="Start-14-{{day}}" class="match-hour">
-                    <label [class.hidden]="day !== currentDay" for="Start-14-{{day}}">14:30/16:00</label>
-                </div>
-                <div *ngFor="let day of daysPerWeekIndices">
-                    <input type="checkbox" name="Start-16-{{day}}" [(ngModel)]="selectedDays[5][day]" id="Start-16-{{day}}" class="match-hour">
-                    <label [class.hidden]="day !== currentDay" for="Start-16-{{day}}">16:00/17:30</label>
-                </div>
-                <div *ngFor="let day of daysPerWeekIndices">
-                    <input type="checkbox" name="Start-17-{{day}}" [(ngModel)]="selectedDays[6][day]" id="Start-17-{{day}}" class="match-hour">
-                    <label [class.hidden]="day !== currentDay" for="Start-17-{{day}}">17:30/19:00</label>
-                </div>
-                <div *ngFor="let day of daysPerWeekIndices">
-                    <input type="checkbox" name="Start-19-{{day}}" [(ngModel)]="selectedDays[7][day]" id="Start-19-{{day}}" class="match-hour">
-                    <label [class.hidden]="day !== currentDay" for="Start-19-{{day}}">19:00/21:30</label>
-                </div>
-                <div *ngFor="let day of daysPerWeekIndices">
-                    <input type="checkbox" name="Start-21-{{day}}" [(ngModel)]="selectedDays[8][day]" id="Start-21-{{day}}" class="match-hour">
-                    <label [class.hidden]="day !== currentDay" for="Start-21-{{day}}">21:30/23:00</label>
-                </div>
+
+                <ng-container *ngFor="let hour of hours; let hourIndex=index">
+                   <div *ngFor="let day of daysPerWeekIndices" [class.hidden]="day !== currentDay">
+                       <input type="checkbox"
+                              id="Start-{{hourIndex}}-{{day}}"
+                              name="Start-{{hourIndex}}-{{day}}"
+                              [(ngModel)]="selectedDays[hourIndex][day]"
+                              class="match-hour">
+                       <label for="Start-{{hourIndex}}-{{day}}">{{ hour }}</label>
+                   </div>
+                </ng-container>
+
             </div>
             <button type="button" (click)="switchDay('next')" class="d-block d-sm-none d-xxl-none">Siguiente</button>
         </div>

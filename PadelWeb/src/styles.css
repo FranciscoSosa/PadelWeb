@@ -39,6 +39,7 @@ h2 {
 }
 
 .match-hour + label {
+  width: 100%;
   cursor: pointer;
   border: 1px solid black;
   color: black;
@@ -546,7 +547,7 @@ aside.content-section {
   }
 
   .schedule-grid > span {
-    display: none;
+    /*display: none;*/
   }
 
 }
