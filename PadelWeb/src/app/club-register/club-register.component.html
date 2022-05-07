@@ -1,0 +1,16 @@
+<div class="club-image main-container bg-image vertical-flex horizontal-flex">
+    <div class="sign-log-menu rounded-corners">
+        <h1 class="header-mb vertical-flex">Club</h1>
+        <form d="login-form" class="vertical-flex">
+            <input type="text" id="name" [(ngModel)]="model.name" name="name" placeholder="nombre" required>
+            <input type="email" [(ngModel)]="model.email" name="email" id="email-id"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$" placeholder="Email" required><br>
+            <input type="text" id="phone" [(ngModel)]="model.phone" name="phone" #phone="ngModel"
+                pattern="[1-9][0-9]{8}" placeholder="Teléfono">
+            <input type="password" [(ngModel)]="model.password" name="password" id="password-id"
+                placeholder="Contraseña" required><br>
+            <input id="login-button" type="submit" (click)="signUp()" value="Iniciar sesión" class="rounded-corners">
+            <p>¿Ya tienes una cuenta? <a routerLink="/club-sign-in">Iniciar sesión</a></p>
+        </form>
+    </div>
+</div>
