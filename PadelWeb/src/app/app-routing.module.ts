@@ -65,6 +65,10 @@ const routes: Routes = [
       {
         path: "match-results",
         component: ClubMatchResultsComponent
+      },
+      {
+        path: "pending-events",
+        component: PendingEventsComponent
       }
     ]
   }
