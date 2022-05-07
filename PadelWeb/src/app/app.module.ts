@@ -19,6 +19,9 @@ import { environment } from 'src/environments/environment';
 import { LoggedAsideComponent } from './logged-aside/logged-aside.component';
 import { PendingEventsComponent } from './pending-events/pending-events.component';
 import { ClubHeaderComponent } from './UserHeader/club-header/club-header.component';
+
+import { FooterComponent } from './footer/footer.component';
+
 import { MainClubComponent } from './main-club/main-club.component';
 import { ClubEditProfileComponent } from './club-edit-profile/club-edit-profile.component';
 import { ClubConfirmMatchComponent } from './club-confirm-match/club-confirm-match.component';
@@ -27,6 +30,7 @@ import { ClubAddTournamentComponent } from './club-add-tournament/club-add-tourn
 import { ClubAddMatchComponent } from './club-add-match/club-add-match.component';
 import { ClubConfirmResultComponent } from './club-confirm-result/club-confirm-result.component';
 import { ClubMatchResultsComponent } from './club-match-results/club-match-results.component';
+
 
 
 @NgModule({
@@ -39,6 +43,9 @@ import { ClubMatchResultsComponent } from './club-match-results/club-match-resul
     PendingEventsComponent,
     LoggedAsideComponent,
     ClubHeaderComponent,
+
+    FooterComponent,
+
     MainClubComponent,
     ClubEditProfileComponent,
     ClubConfirmMatchComponent,
@@ -47,6 +54,7 @@ import { ClubMatchResultsComponent } from './club-match-results/club-match-resul
     ClubAddMatchComponent,
     ClubConfirmResultComponent,
     ClubMatchResultsComponent
+
   ],
   imports: [
     BrowserModule,
