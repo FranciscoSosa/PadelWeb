@@ -32,6 +32,7 @@ import { ClubAddMatchComponent } from './club-add-match/club-add-match.component
 import { ClubConfirmResultComponent } from './club-confirm-result/club-confirm-result.component';
 import { ClubMatchResultsComponent } from './club-match-results/club-match-results.component';
 import { ClubSignInComponent } from './club-sign-in/club-sign-in.component';
+import { UserChooseDayAndClubComponent } from './user-choose-day-and-club/user-choose-day-and-club.component';
 
 
 
@@ -55,7 +56,8 @@ import { ClubSignInComponent } from './club-sign-in/club-sign-in.component';
     ClubAddMatchComponent,
     ClubConfirmResultComponent,
     ClubMatchResultsComponent,
-    ClubSignInComponent
+    ClubSignInComponent,
+    UserChooseDayAndClubComponent
   ],
   imports: [
     BrowserModule,

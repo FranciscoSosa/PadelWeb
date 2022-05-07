@@ -26,4 +26,8 @@ export class ClubService {
   deleteClub(id: string){
     return this.db.collection<Club>(this.dbPath).doc(id).delete();
   }
+
+  getClubs(){
+    return this.db.collection<Club>(this.dbPath).valueChanges()
+  }
 }
