@@ -1,0 +1,35 @@
+.splitter {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.splitter-bg-image::before {
+  content: "";
+  height: 100%;
+  background-size: 100%;
+  background-position: bottom;
+  z-index: -1;
+}
+
+.bg-blur {
+  backdrop-filter: blur(100px);
+  height: 100%;
+  width: 100%;
+}
+
+.card {
+  background-color: white;
+  border-radius: 2em;
+  height: 50%;
+  width: 50%;
+}
+
+.club::before {
+  background-image: url(../../assets/images/selector-club-image.svg);
+}
+
+.user::before {
+  background-image: url(../../assets/images/selector-user-image.svg);
+}

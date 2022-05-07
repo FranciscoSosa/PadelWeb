@@ -14,11 +14,16 @@ import { ClubAddTournamentComponent } from './club-add-tournament/club-add-tourn
 import { ClubAddMatchComponent } from './club-add-match/club-add-match.component';
 import { ClubConfirmResultComponent } from './club-confirm-result/club-confirm-result.component';
 import { ClubMatchResultsComponent } from './club-match-results/club-match-results.component';
+import {SignInSelectorComponent} from "./sign-in-selector/sign-in-selector.component";
 
 const routes: Routes = [
   {
     path: "sign-in",
     component: SignInComponent
+  },
+  {
+    path: "sign-in-selector",
+    component: SignInSelectorComponent
   },
   {
     path: "user",

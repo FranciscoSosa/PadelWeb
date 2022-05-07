@@ -1,4 +1,3 @@
 export interface Match {
-  img: string,
-  data: string
+  court: number
 }
