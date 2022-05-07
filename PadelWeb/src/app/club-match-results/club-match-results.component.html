@@ -1,0 +1,18 @@
+<main class="col-lg-8 offset-lg-1 login-view-main rounded-corners center-child">
+    <form (ngSubmit)="submit()" #matchResults="ngForm">
+        <h1 class="match-info-header">Datos del partido</h1>
+        <section class="add-result-grid">
+            <div class="players-result">
+                <h2 class="header-mb">Participantes</h2>
+            </div>
+            <div class="result">
+                <h2 class="header-mb">Resultado</h2>
+                    <input *ngFor="let set of numberOfSetsIndices" type="number" name="team1-set{{set}}" [(ngModel)]="setsResults[0][set]"
+                     id="team1-set{{set}}" min="0" max="7" size="2" required><br>
+                    <input *ngFor="let set of numberOfSetsIndices" type="number" name="team1-set{{set}}" [(ngModel)]="setsResults[1][set]"
+                     id="team1-set{{set}}" min="0" max="7" size="2" required><br>
+                <input type="submit" value="Enviar resultado">
+            </div>
+        </section>
+    </form>
+</main>

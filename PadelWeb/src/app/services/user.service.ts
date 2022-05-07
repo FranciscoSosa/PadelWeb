@@ -11,12 +11,11 @@ export class UserService {
 
   constructor(private db: AngularFirestore) { }
 
-
-  getAllUsers(){
-    return this.db.collection<User>(this.dbPath).valueChanges();
+  updateUser(id: string, data: any){
+    return this.db.collection<User>(this.dbPath).doc(id).update(data);
   }
 
-  getUserByEmail(email: string){
-    return this.db.collection<User>(this.dbPath, ref => ref.where('email', '==', email)).valueChanges();
+  deleteUser(id: string){
+    return this.db.collection<User>(this.dbPath).doc(id).delete();
   }
 }

@@ -1,0 +1,20 @@
+<main class="col offset-lg-1 login-view-main rounded-corners horizontal-flex">
+    <section class="tournament-section rounded-corners">
+        <form (ngSubmit)="submit()" #addTournament="ngForm">
+            <label for="day">Escoja día</label>
+            <input type="date" name="tournament-day" [(ngModel)]="tournament.day" id="day" class="rounded-corners" required><br>
+            <label for="tournament">Nombre del Torneo:</label>
+            <input type="text" name="tournament-name" id="tournament" [(ngModel)]="tournament.name" class="rounded-corners" required><br>
+            <label for="players">Número de participantes:</label>
+            <input type="number" name="players-number" [(ngModel)]="tournament.players" id="players" min="2" max="32" class="rounded-corners"
+                   required><br>
+            <label for="ranked">Clasificatorio</label>
+            <input type="checkbox" name="ranked-check" [(ngModel)]="tournament.ranked" id="ranked"><br>
+            <label for="comments">Comentarios:</label><br>
+            <textarea name="comments" [(ngModel)]="tournament.comments" id="comments" cols="30" rows="10"></textarea><br>
+            <div class="center-child">
+                <input type="submit" value="Generar Torneo" class="rounded-corners">
+            </div>
+        </form>
+    </section>
+</main>

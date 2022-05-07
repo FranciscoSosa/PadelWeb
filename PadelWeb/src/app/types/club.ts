@@ -2,11 +2,11 @@ import {Tournament} from "./tournament";
 import {Match} from "./match";
 
 export interface Club {
-  id: number,
+  uid: string,
   name: string,
-  telephone: string,
-  courts: number,
-  location: string
+  email: string,
+  phone: string,
   img: string,
-  pending: Tournament | Match []
+  pending: (Tournament | Match)[],
+  active: (Tournament | Match)[]
 }
