@@ -5,13 +5,12 @@ export interface User {
   uid: string,
   email: string,
   name?: string,
-  surname?: string,
   img?: string,
   playedGames: number,
   wonGames: number,
   rank?: string,
   points?: number
-  history?: string[],
+  history?: Match[],
   matches?: Match[],
   tournaments?: Tournament[]
 }
