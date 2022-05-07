@@ -11,6 +11,7 @@ import {environment} from "../../environments/environment";
 })
 export class ClubAddMatchComponent implements OnInit {
 
+  currentDay: number = 0;
   private readonly numberOfHours: number = 9;
   private readonly daysPerWeek: number = 7; 
   readonly daysPerWeekIndices: number[] = [0, 1, 2, 3, 4, 5, 6];
@@ -27,5 +28,16 @@ export class ClubAddMatchComponent implements OnInit {
 
   submit(): void{
     console.log(this.selectedDays);
+  }
+
+
+  switchDay(direction:"next"|"last") {
+    if (direction === "next"){
+      this.currentDay = ++this.currentDay % 7;
+    }else {
+      if(--this.currentDay <= 0){
+        this.currentDay = 6;
+      }
+    }
   }
 }

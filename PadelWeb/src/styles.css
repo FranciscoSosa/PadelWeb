@@ -513,9 +513,6 @@ aside.content-section {
 }
 
 @media (max-width: 720px) {
-  .active {
-    display: inline !important;
-  }
 
   .days-grid > label {
     display: none;
