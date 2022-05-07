@@ -1,6 +1,9 @@
-.fphoto-cancha {
-  aspect-ratio: 16 / 9;
-  height: 15em;
+@media (max-width: 540px) {
+
+  .fphoto-cancha {
+    aspect-ratio: 16 / 9;
+    height: 15em;
+  }
 }
 
 h2 {

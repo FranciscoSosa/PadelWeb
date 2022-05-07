@@ -11,7 +11,13 @@
 input {
   margin-bottom: 1em;
 }
-
+input[type="submit"] {
+  padding: .25em;
+}
+input[type="text"],
+input[type="number"] {
+  padding: .125em;
+}
 h2 {
   padding-top: 1rem;
   padding-bottom: 2rem;
@@ -22,7 +28,11 @@ h2 {
   justify-content: space-around;
   align-items: center;
 }
-#contact-image {
-  aspect-ratio: 16 / 9;
-  height: 15em;
+
+@media (max-width: 540px) {
+
+  #contact-image {
+    aspect-ratio: 16 / 9;
+    height: 15em;
+  }
 }
