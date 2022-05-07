@@ -17,7 +17,7 @@ export class ClubAuthService {
     this.user$ = this.afAuth.authState.pipe(
       switchMap(club => {
         if(club){
-          return this.afs.doc<Club>(`User/${club.uid}`).valueChanges();
+          return this.afs.doc<Club>(`Club/${club.uid}`).valueChanges();
         } else {
           return of(undefined);
         }
@@ -41,7 +41,7 @@ export class ClubAuthService {
   }
 
   private updateUser({uid, email}: firebase.default.User, name: string, phone: string) {
-    const userRef = this.afs.doc<Club>(`User/${uid}`)
+    const userRef = this.afs.doc<Club>(`Club/${uid}`)
     const data: Club = {
       uid,
       name,
