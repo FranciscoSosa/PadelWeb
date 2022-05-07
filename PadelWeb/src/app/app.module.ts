@@ -15,6 +15,7 @@ import { UserStatisticsComponent } from './user-statistics/user-statistics.compo
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore'
 import { environment } from 'src/environments/environment';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 import { LoggedAsideComponent } from './logged-aside/logged-aside.component';
 import { PendingEventsComponent } from './pending-events/pending-events.component';
@@ -42,10 +43,9 @@ import { ClubMatchResultsComponent } from './club-match-results/club-match-resul
     MainUserComponent,
     PendingEventsComponent,
     LoggedAsideComponent,
+    SignInComponent
     ClubHeaderComponent,
-
     FooterComponent,
-
     MainClubComponent,
     ClubEditProfileComponent,
     ClubConfirmMatchComponent,
@@ -54,7 +54,6 @@ import { ClubMatchResultsComponent } from './club-match-results/club-match-resul
     ClubAddMatchComponent,
     ClubConfirmResultComponent,
     ClubMatchResultsComponent
-
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,7 @@ import { PendingEventsComponent } from './pending-events/pending-events.componen
 import {UserEditProfileComponent} from "./user-edit-profile/user-edit-profile.component";
 import {MainUserComponent} from "./main-user/main-user.component";
 import {UserStatisticsComponent} from "./user-statistics/user-statistics.component";
+import {SignInComponent} from "./sign-in/sign-in.component";
 import { MainClubComponent } from './main-club/main-club.component';
 import { ClubEditProfileComponent } from './club-edit-profile/club-edit-profile.component';
 import { ClubConfirmMatchComponent } from './club-confirm-match/club-confirm-match.component';
@@ -15,6 +16,10 @@ import { ClubConfirmResultComponent } from './club-confirm-result/club-confirm-r
 import { ClubMatchResultsComponent } from './club-match-results/club-match-results.component';
 
 const routes: Routes = [
+  {
+    path: "sign-in",
+    component: SignInComponent
+  },
   {
     path: "user",
     component: MainUserComponent,
