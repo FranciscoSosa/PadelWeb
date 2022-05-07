@@ -43,7 +43,7 @@ import { ClubMatchResultsComponent } from './club-match-results/club-match-resul
     MainUserComponent,
     PendingEventsComponent,
     LoggedAsideComponent,
-    SignInComponent
+    SignInComponent,
     ClubHeaderComponent,
     FooterComponent,
     MainClubComponent,
