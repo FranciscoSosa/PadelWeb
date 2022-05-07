@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import {environment} from "../../environments/environment";
 
 @Component({
   selector: 'app-club-add-match',
   templateUrl: './club-add-match.component.html',
-  styleUrls: ['./club-add-match.component.css']
+  styleUrls: ['./club-add-match.component.css'],
+  host: {
+    class: environment.userPageLayout
+  }
 })
 export class ClubAddMatchComponent implements OnInit {
 
