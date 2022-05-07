@@ -25,6 +25,7 @@ import { ClubConfirmMatchComponent } from './club-confirm-match/club-confirm-mat
 import { ClubConfirmTournamentComponent } from './club-confirm-tournament/club-confirm-tournament.component';
 import { ClubAddTournamentComponent } from './club-add-tournament/club-add-tournament.component';
 import { ClubAddMatchComponent } from './club-add-match/club-add-match.component';
+import { ClubConfirmResultComponent } from './club-confirm-result/club-confirm-result.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { ClubAddMatchComponent } from './club-add-match/club-add-match.component
     ClubConfirmMatchComponent,
     ClubConfirmTournamentComponent,
     ClubAddTournamentComponent,
-    ClubAddMatchComponent
+    ClubAddMatchComponent,
+    ClubConfirmResultComponent
   ],
   imports: [
     BrowserModule,
