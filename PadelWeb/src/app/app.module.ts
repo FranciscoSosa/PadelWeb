@@ -13,6 +13,7 @@ import { PendingEventsComponent } from './pending-events/pending-events.componen
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore'
 import { environment } from 'src/environments/environment';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { environment } from 'src/environments/environment';
     UserStatisticsComponent,
     MainUserComponent,
     PendingEventsComponent,
-    LoggedAsideComponent
+    LoggedAsideComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,

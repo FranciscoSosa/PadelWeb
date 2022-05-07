@@ -4,8 +4,13 @@ import { PendingEventsComponent } from './pending-events/pending-events.componen
 import {UserEditProfileComponent} from "./user-edit-profile/user-edit-profile.component";
 import {MainUserComponent} from "./main-user/main-user.component";
 import {UserStatisticsComponent} from "./user-statistics/user-statistics.component";
+import {SignInComponent} from "./sign-in/sign-in.component";
 
 const routes: Routes = [
+  {
+    path: "sign-in",
+    component: SignInComponent
+  },
   {
     path: "user",
     component: MainUserComponent,
