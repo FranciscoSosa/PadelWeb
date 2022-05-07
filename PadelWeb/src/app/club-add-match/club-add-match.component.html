@@ -1,6 +1,6 @@
 <main class="login-view-main rounded-corners col-12 col-lg-8 offset-lg-1 mr-auto ml-auto">
     <h1 class="schedule-header">Selecciona el horario</h1>
-    <form form (ngSubmit)="submit()" #addMatch="ngForm">
+    <form (ngSubmit)="submit()" #addMatch="ngForm">
         <div id="days" class="days-grid horizontal-flex" style="text-align: center;">
             <button type="button" onclick="switchDay(false)" class="d-block d-sm-none d-xxl-none" value="0">
                 Anterior
@@ -66,10 +66,10 @@
                 <button type="button" onclick="switchDay(true)" class="d-block d-sm-none d-xxl-none">Siguiente
                 </button>
             </div>
-            <div class="add-match">
-                <div class="add-match-submit center-child">
-                    <input type="submit" value="Agregar partidos" class="rounded-corners">
-                </div>
+        </div>
+        <div class="add-match">
+            <div class="add-match-submit center-child">
+                <input type="submit" value="Agregar partidos" class="rounded-corners">
             </div>
         </div>
     </form>
