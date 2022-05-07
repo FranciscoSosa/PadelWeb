@@ -24,6 +24,9 @@ import { ClubEditProfileComponent } from './club-edit-profile/club-edit-profile.
 import { ClubConfirmMatchComponent } from './club-confirm-match/club-confirm-match.component';
 import { ClubConfirmTournamentComponent } from './club-confirm-tournament/club-confirm-tournament.component';
 import { ClubAddTournamentComponent } from './club-add-tournament/club-add-tournament.component';
+import { ClubAddMatchComponent } from './club-add-match/club-add-match.component';
+import { ClubConfirmResultComponent } from './club-confirm-result/club-confirm-result.component';
+import { ClubMatchResultsComponent } from './club-match-results/club-match-results.component';
 
 
 @NgModule({
@@ -40,7 +43,10 @@ import { ClubAddTournamentComponent } from './club-add-tournament/club-add-tourn
     ClubEditProfileComponent,
     ClubConfirmMatchComponent,
     ClubConfirmTournamentComponent,
-    ClubAddTournamentComponent
+    ClubAddTournamentComponent,
+    ClubAddMatchComponent,
+    ClubConfirmResultComponent,
+    ClubMatchResultsComponent
   ],
   imports: [
     BrowserModule,
