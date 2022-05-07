@@ -1,6 +1,11 @@
 .text-align-center {
   text-align: center;
 }
+.center-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 @media (max-width: 768px) {
   .home-content-section {
     border-radius: 2em;

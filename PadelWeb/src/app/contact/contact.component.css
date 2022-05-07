@@ -16,3 +16,13 @@ h2 {
   padding-top: 1rem;
   padding-bottom: 2rem;
 }
+.horizontal-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+#contact-image {
+  aspect-ratio: 16 / 9;
+  height: 15em;
+}
