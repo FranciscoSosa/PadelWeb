@@ -1,17 +1,19 @@
 <main class="col-lg-8 offset-lg-1 login-view-main rounded-corners">
-    <section>
-        <div class="content-section pending-events" *ngFor="let event of club?.pending">
-            <span *ngIf="isMatch(event); else tournament">
+    <section class="vertical-flex">
+        <div class="content-section pending-events" *ngFor="let event of club?.pending;  let eventIndex = index">
+            <span *ngIf="isMatch(event); else tournament" (click)="select(eventIndex)">
                 <img [src]="$any(event).img" alt="">
                 {{$any(event).dayHour}},
                 {{$any(event).ranking}}
             </span>
             <ng-template #tournament>
-                <img [src]="$any(event).img" alt="">
-                {{$any(event).name}},
-                {{$any(event).day}},
-                {{$any(event).players}} Jugadores,
-                <span *ngIf="$any(event).ranked">Clasificatorio</span>
+                <div (click)="select(eventIndex)" >
+                    <img [src]="$any(event).img" alt="">
+                    {{$any(event).name}},
+                    {{$any(event).day}},
+                    {{$any(event).players}} Jugadores,
+                    <span *ngIf="$any(event).ranked">Clasificatorio</span>
+                </div>
             </ng-template>
         </div>
     </section>

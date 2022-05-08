@@ -4,12 +4,10 @@
             <h1 class="schedule-header">Selecciona el club</h1>
 
             <div class="columClubs">
-                <span id="club-selection horizontal-flex" *ngFor="let club of clubs" >
-                    <div class="vertical-flex">
-                        <img class="imgClub"[src]="club.img" style="cursor: pointer;" [routerLink]="['/user/chooseMatch',club.uid]">
-                        <p class="nameClub" style="cursor: pointer;" [routerLink]="['/user/chooseMatch',club.uid]">{{club.name}}</p>
-                    </div>
-                </span>
+                <div class="vertical-flex" *ngFor="let club of clubs">
+                    <img class="imgClub"[src]="club.img" style="cursor: pointer;" [routerLink]="['/user/chooseMatch',club.uid]">
+                    <p class="nameClub" style="cursor: pointer;" [routerLink]="['/user/chooseMatch',club.uid]">{{club.name}}</p>
+                </div>
             </div>
         </section>
     </form>
