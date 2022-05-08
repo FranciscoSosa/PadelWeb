@@ -30,6 +30,11 @@ import {SignUpComponent} from "./sign-up/sign-up.component";
 
 const routes: Routes = [
   {
+    path: "",
+    redirectTo: "/home",
+    pathMatch: "full"
+  },
+  {
     path: "sign-in",
     component: SignInComponent
   },

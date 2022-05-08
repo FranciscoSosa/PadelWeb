@@ -23,7 +23,7 @@ export class ClubAddTournamentComponent implements OnInit {
     players: 2,
     ranked: false,
     comments: "",
-    img: "../../assets/images/tournament.svg"
+    img: "assets/images/tournament.svg"
   }
 
   constructor(private auth: ClubAuthService, private clubService: ClubService) { }
