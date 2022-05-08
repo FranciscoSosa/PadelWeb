@@ -1,5 +1,7 @@
 import {Tournament} from "./tournament";
 import {Match} from "./match";
+import firebase from "firebase/compat";
+import DocumentReference = firebase.firestore.DocumentReference;
 
 export interface User {
   uid: string,
@@ -10,7 +12,7 @@ export interface User {
   wonGames: number,
   rank?: string,
   points?: number
-  history?: Match[],
+  history?: DocumentReference<Match>[],
   matches?: Match[],
   tournaments?: Tournament[]
 }

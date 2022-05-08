@@ -1,5 +1,5 @@
 <aside class="content-section">
-  <div *ngIf="userInfo" class="vertical-flex">
+  <div *ngIf="!isClub" class="vertical-flex">
     <img [src]="userInfo.img" class="user-profile-picture">
     <div class="user-info-display content-section">
       <p>{{ userInfo.name }}</p>
@@ -25,7 +25,7 @@
       </div>
     </div>
   </div>
-  <div *ngIf="clubInfo" class="vertical-flex">
+  <div *ngIf="isClub" class="vertical-flex">
     <img [src]="clubInfo.img" class="user-profile-picture">
     <div class="user-info-display content-section">
       <p id="aside-name">{{clubInfo.name}}</p>
