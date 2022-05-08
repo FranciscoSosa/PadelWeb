@@ -27,6 +27,7 @@ const routes: Routes = [
     path: "sign-in-selector",
     component: SignInSelectorComponent
   },
+  {
     path: "club-sign-in",
     component: ClubSignInComponent
   },

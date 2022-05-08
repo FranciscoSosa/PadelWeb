@@ -7,7 +7,7 @@ import {ClubAuthService} from "../services/club-auth.service";
 
 @Component({
   selector: 'app-logged-aside',
-  templateUrl: './logger-aside.component.html',
+  templateUrl: './logged-aside.component.html',
   styleUrls: ['./logged-aside.component.css']
 })
 export class LoggedAsideComponent implements OnInit {
