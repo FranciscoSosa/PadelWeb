@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {User} from "../types/user";
-import {HttpClient} from "@angular/common/http";
 import {Club} from "../types/club";
 import {AuthService} from "../services/auth.service";
 import {ClubAuthService} from "../services/club-auth.service";
@@ -21,7 +20,7 @@ export class LoggedAsideComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if(this.isClub) {
+    if(!this.isClub) {
       this.userService.user$.subscribe(user => {
         if(user) {
           this.userInfo = user;

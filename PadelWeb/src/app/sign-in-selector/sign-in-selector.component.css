@@ -5,31 +5,53 @@
   grid-template-rows: 1fr;
 }
 
-.splitter-bg-image::before {
-  content: "";
+.splitter-bg-image {
+  position: fixed;
+  z-index: 1;
+  width: 50%;
   height: 100%;
+
   background-size: 100%;
   background-position: bottom;
-  z-index: -1;
+  filter: blur(5px);
 }
 
-.bg-blur {
-  backdrop-filter: blur(100px);
+.content {
+  position: fixed;
+  z-index: 2;
+  width: 50%;
   height: 100%;
-  width: 100%;
 }
 
 .card {
-  background-color: white;
+  width: 40%;
+  aspect-ratio: 1 / 1;
   border-radius: 2em;
-  height: 50%;
-  width: 50%;
+  font-size: 3em;
+  text-align: center;
+  color: black;
+  transition: 0.3s;
+  opacity: 0.7;
 }
 
-.club::before {
+.card:hover {
+  width: 50%;
+  font-size: 3.3em;
+  opacity: 1;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.club {
   background-image: url(../../assets/images/selector-club-image.svg);
 }
 
-.user::before {
+.user {
   background-image: url(../../assets/images/selector-user-image.svg);
 }
