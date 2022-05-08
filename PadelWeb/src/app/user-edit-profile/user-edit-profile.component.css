@@ -2,6 +2,7 @@
 
 form.vertical-flex {
   padding-left: 2em;
+  height: 100%;
   padding-right: 2em;
 }
 .formError {
