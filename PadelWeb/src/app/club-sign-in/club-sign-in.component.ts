@@ -22,6 +22,6 @@ export class ClubSignInComponent implements OnInit {
 
   login(): void{
     this.auth.signIn(this.model.email, this.model.password)
-    .then(() => this.router.navigate(["/club/profile"]));
+    .then(() => this.router.navigate(["/club/pending-events"]));
   }
 }
