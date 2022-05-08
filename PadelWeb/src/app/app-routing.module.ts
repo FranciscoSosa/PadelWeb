@@ -16,6 +16,7 @@ import { ClubConfirmResultComponent } from './club-confirm-result/club-confirm-r
 import { ClubMatchResultsComponent } from './club-match-results/club-match-results.component';
 import { ClubSignInComponent } from './club-sign-in/club-sign-in.component';
 import { UserChooseDayAndClubComponent } from './user-choose-day-and-club/user-choose-day-and-club.component';
+import { UserChooseMatchComponent } from './user-choose-match/user-choose-match.component';
 
 const routes: Routes = [
   {
@@ -46,7 +47,12 @@ const routes: Routes = [
       {
         path: "chooseDay",
         component: UserChooseDayAndClubComponent
+      },
+      {
+        path: "chooseMatch/:uid",
+        component: UserChooseMatchComponent
       }
+
     ],
   },
   {
