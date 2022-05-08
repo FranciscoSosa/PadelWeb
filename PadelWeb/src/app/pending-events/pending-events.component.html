@@ -1,5 +1,5 @@
 <main class="col-lg-8 offset-lg-1 login-view-main rounded-corners">
-    <section>
+    <section class="vertical-flex">
         <div class="content-section pending-events" *ngFor="let event of club?.pending;  let eventIndex = index">
             <span *ngIf="isMatch(event); else tournament" (click)="select(eventIndex)">
                 <img [src]="$any(event).img" alt="">
