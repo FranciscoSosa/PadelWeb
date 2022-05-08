@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-club-header',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class ClubHeaderComponent implements OnInit {
   show: boolean;
 
-  constructor() {
+  constructor(private db: AuthService) {
     this.show=false
   }
 
@@ -21,6 +22,10 @@ export class ClubHeaderComponent implements OnInit {
     }else if(this.show === true){
       this.show = false;
     }
+  }
+
+  logOut(){
+    this.db.signOut();
   }
 
 }

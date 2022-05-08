@@ -6,12 +6,11 @@
         </div>
         <div class="row navmini" *ngIf="show">
             <nav>
-                <div class="row hoverNav"><img class="lognav col" src="https://firebasestorage.googleapis.com/v0/b/pwm-padel.appspot.com/o/NAV%2Fpersonamenu.png?alt=media&token=fe4886c5-a7a6-4d39-8286-cc5cdc290372"><div class="col margin-auto"><span class="margin-auto__content">Perfil</span></div></div>
-                <div class="row hoverNav"><img class="lognav col" src="https://firebasestorage.googleapis.com/v0/b/pwm-padel.appspot.com/o/NAV%2Festadisticasmenu.png?alt=media&token=0bfc0fc4-12f1-4fcd-8dd5-a37ed5eca4bd"><div class="col margin-auto"><span class="margin-auto__content">Estadisticas</span></div></div>
-                <div class="row hoverNav"><img class="lognav col" src="https://firebasestorage.googleapis.com/v0/b/pwm-padel.appspot.com/o/NAV%2Fpartidomenu.png?alt=media&token=d86e528a-2a56-43a6-a194-63096ca9bdfc"><div class="col margin-auto"><span class="margin-auto__content">Agregarse a Partidos</span></div></div>
-                <div class="row hoverNav"><img class="lognav col" src="https://firebasestorage.googleapis.com/v0/b/pwm-padel.appspot.com/o/NAV%2Ftorneomenu.png?alt=media&token=c42e5336-ce05-448c-b9cb-ebefb0de426b"><div class="col margin-auto"><span class="margin-auto__content">Agregarse a Torneos</span></div></div>
-                <div class="row hoverNav"><img class="lognav col" src="https://firebasestorage.googleapis.com/v0/b/pwm-padel.appspot.com/o/NAV%2Fpendientemenu.png?alt=media&token=868f3323-eb67-46b6-b794-f750a882bdf2"><div class="col margin-auto"><span class="margin-auto__content">Mis Partidos</span></div></div>
-                <div class="row hoverNav"><img class="lognav col" src="https://firebasestorage.googleapis.com/v0/b/pwm-padel.appspot.com/o/NAV%2Flogoutmenu.png?alt=media&token=b201eafd-6dc7-4220-9177-2de8e06bdd9f"><div class="col margin-auto"><span class="margin-auto__content">Log Out</span></div></div>
+                <div class="row hoverNav"><img [routerLink]="['/user/profile']" class="lognav col" src="https://firebasestorage.googleapis.com/v0/b/pwm-padel.appspot.com/o/NAV%2Fpersonamenu.png?alt=media&token=fe4886c5-a7a6-4d39-8286-cc5cdc290372"><div class="col margin-auto"><span class="margin-auto__content">Perfil</span></div></div>
+                <div class="row hoverNav"><img [routerLink]="['/user/statistics']" class="lognav col" src="https://firebasestorage.googleapis.com/v0/b/pwm-padel.appspot.com/o/NAV%2Festadisticasmenu.png?alt=media&token=0bfc0fc4-12f1-4fcd-8dd5-a37ed5eca4bd"><div class="col margin-auto"><span class="margin-auto__content">Estadisticas</span></div></div>
+                <div class="row hoverNav"><img [routerLink]="['/user/chooseDay']" class="lognav col" src="https://firebasestorage.googleapis.com/v0/b/pwm-padel.appspot.com/o/NAV%2Fpartidomenu.png?alt=media&token=d86e528a-2a56-43a6-a194-63096ca9bdfc"><div class="col margin-auto"><span class="margin-auto__content">Agregarse a Partidos</span></div></div>
+                <div class="row hoverNav"><img [routerLink]="['/user/profile']" class="lognav col" src="https://firebasestorage.googleapis.com/v0/b/pwm-padel.appspot.com/o/NAV%2Fpendientemenu.png?alt=media&token=868f3323-eb67-46b6-b794-f750a882bdf2"><div class="col margin-auto"><span class="margin-auto__content">Mis Partidos</span></div></div>
+                <div class="row hoverNav"><img (click)="logOut()" [routerLink]="['/']" class="lognav col" src="https://firebasestorage.googleapis.com/v0/b/pwm-padel.appspot.com/o/NAV%2Flogoutmenu.png?alt=media&token=b201eafd-6dc7-4220-9177-2de8e06bdd9f"><div class="col margin-auto"><span class="margin-auto__content">Log Out</span></div></div>
             </nav>
         </div>
     </div>
@@ -22,9 +21,8 @@
             <img [routerLink]="['/user/profile']" class="logonav hoverNav" src="https://firebasestorage.googleapis.com/v0/b/pwm-padel.appspot.com/o/NAV%2Fpersonamenu.png?alt=media&token=fe4886c5-a7a6-4d39-8286-cc5cdc290372">
             <img [routerLink]="['/user/statistics']" class="logonav hoverNav" src="https://firebasestorage.googleapis.com/v0/b/pwm-padel.appspot.com/o/NAV%2Festadisticasmenu.png?alt=media&token=0bfc0fc4-12f1-4fcd-8dd5-a37ed5eca4bd">
             <img [routerLink]="['/user/chooseDay']" class="logonav hoverNav" src="https://firebasestorage.googleapis.com/v0/b/pwm-padel.appspot.com/o/NAV%2Fpartidomenu.png?alt=media&token=d86e528a-2a56-43a6-a194-63096ca9bdfc">
-            <img [routerLink]="['/user/profile']" class="logonav hoverNav" src="https://firebasestorage.googleapis.com/v0/b/pwm-padel.appspot.com/o/NAV%2Ftorneomenu.png?alt=media&token=c42e5336-ce05-448c-b9cb-ebefb0de426b">
             <img [routerLink]="['/user/profile']" class="logonav hoverNav" src="https://firebasestorage.googleapis.com/v0/b/pwm-padel.appspot.com/o/NAV%2Fpendientemenu.png?alt=media&token=868f3323-eb67-46b6-b794-f750a882bdf2">
-            <img [routerLink]="['/user/profile']" class="logonav hoverNav" src="https://firebasestorage.googleapis.com/v0/b/pwm-padel.appspot.com/o/NAV%2Flogoutmenu.png?alt=media&token=b201eafd-6dc7-4220-9177-2de8e06bdd9f">
+            <img (click)="logOut()" [routerLink]="['/']" class="logonav hoverNav" src="https://firebasestorage.googleapis.com/v0/b/pwm-padel.appspot.com/o/NAV%2Flogoutmenu.png?alt=media&token=b201eafd-6dc7-4220-9177-2de8e06bdd9f">
         </nav>
     </div>
 </header>
