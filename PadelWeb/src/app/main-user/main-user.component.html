@@ -1,0 +1,13 @@
+<div class="logged-user-image main-container">
+
+  <app-user-header></app-user-header>
+
+  <div class="container-fluid">
+    <div class="row">
+      <app-logged-aside class="col-2 mr-auto ml-auto d-none d-lg-flex logged-aside"
+                        [isClub]="false"></app-logged-aside>
+      <router-outlet style="display:none"></router-outlet>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,46 @@
+<div class="user-statistics-grid">
+
+  <section class="rank-display content-section">
+    <div>
+      <img src="assets/images/rank_example.svg"
+           alt="Image showing this user current rank">
+    </div>
+    <span>70 P</span>
+    <div>
+      <img class="" src="assets/images/ranking-up-precedence.png"
+           alt="Image showing whether this user is most likely to rank up or down in the moment">
+    </div>
+  </section>
+  <section id="match-history" class="history-display content-section vertical-flex">
+    <h3 style="margin-top: .5em">Partidos anteriores</h3>
+    <div class="match-info-display horizontal-flex" *ngFor="let match of history">
+      {{ match.court }}
+    </div>
+  </section>
+
+  <section class="statistics-display">
+    <div class="content-section vertical-flex">
+
+      <h1 class="space-updown">Tu progreso</h1>
+      <section class="horizontal-flex space-updown">
+        <img src="assets/images/PieChart.svg">
+        <h3>87% de victorias</h3>
+      </section>
+
+      <section class="text-align-center space-updown">
+        <div class="img-container">
+          <img src="assets/images/Graph.svg">
+        </div>
+        <h3>Frecuencia de juego</h3>
+      </section>
+
+      <section class="text-align-center space-updown">
+        <div class="img-container">
+          <img src="assets/images/Graph.svg">
+        </div>
+        <h3>Evolución</h3>
+      </section>
+    </div>
+  </section>
+</div>
+
