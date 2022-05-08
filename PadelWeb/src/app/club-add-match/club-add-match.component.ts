@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {environment} from "../../environments/environment";
+import { ClubAuthService } from '../services/club-auth.service';
+import { ClubService } from '../services/club.service';
+import { Club } from '../types/club';
+import { Match } from '../types/match';
 
 @Component({
   selector: 'app-club-add-match',
@@ -11,9 +15,19 @@ import {environment} from "../../environments/environment";
 })
 export class ClubAddMatchComponent implements OnInit {
 
+  private club!: Club | undefined;
   currentDay: number = 0;
   private readonly numberOfHours: number = 9;
   private readonly daysPerWeek: number = 7;
+  private readonly days = [
+    "Lunes",
+    "Martes",
+    "Miércoles",
+    "Jueves",
+    "Viernes",
+    "Sábado",
+    "Domingo"
+  ];
   readonly daysPerWeekIndices: number[] = [0, 1, 2, 3, 4, 5, 6];
   readonly hours = [
     "8:30/10:00",
@@ -32,14 +46,35 @@ export class ClubAddMatchComponent implements OnInit {
     .map(() => new Array(this.daysPerWeek).fill(false));
 
 
-  constructor() { }
+  constructor(private auth: ClubAuthService, private clubService: ClubService) { }
 
   ngOnInit(): void {
-
+    this.auth.user$.subscribe(
+      (club) => { this.club = club }
+    );
   }
 
   submit(): void{
-    console.log(this.selectedDays);
+    let i = 0;
+    let j = 0;
+    for(let hour of this.hours){
+      for(let day of this.days){
+        if(this.selectedDays[i][j]){
+          let match: Match = {
+            dayHour: `Día ${day} y hora ${hour}`,
+            players: [],
+            ranked: true,
+            ranking: "Oro", 
+            img: "../../assets/images/match.svg"
+          }
+          this.club?.active.push(match);
+          this.clubService.updateClub(this.club?.uid as string, { active: this.club?.active });
+        }
+        j++;
+      }
+      i++;
+      j = 0;
+    }
   }
 
 
