@@ -1,0 +1,23 @@
+[
+  {"id": 1,
+    "URL": "assets/images/cancha1(def).png",
+    "Nombre": "Club1",
+    "Direccion": "Las Palmas de Gran Canaria",
+    "Descripcion": "Es una cancha del padel"
+  },
+
+  {"id": 2,
+    "URL": "assets/images/cancha2(def).png",
+    "Nombre": "Club2",
+    "Direccion": "Las Palmas de Gran Canaria",
+    "Descripcion": "Es una cancha del padel"
+  },
+
+  {"id": 3,
+    "URL": "assets/images/cancha3(def).png",
+    "Nombre": "Club3",
+    "Direccion": "Las Palmas de Gran Canaria",
+    "Descripcion": "Es una cancha del padel"
+  }
+
+]

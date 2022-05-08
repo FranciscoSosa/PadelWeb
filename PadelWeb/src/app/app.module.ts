@@ -19,6 +19,13 @@ import { SignInComponent } from './sign-in/sign-in.component';
 
 import { LoggedAsideComponent } from './logged-aside/logged-aside.component';
 import { PendingEventsComponent } from './pending-events/pending-events.component';
+import { FootherComponent } from './foother/foother.component';
+import { ClubAffilatesComponent } from './club-affilates/club-affilates.component';
+import { HeaderComponent } from './header/header.component';
+import { WhoAreWeComponent } from './who-are-we/who-are-we.component';
+import { FAQComponent } from './faq/faq.component';
+import { ContactComponent } from './contact/contact.component';
+import { HomeComponent } from './home/home.component';
 import { ClubHeaderComponent } from './UserHeader/club-header/club-header.component';
 
 import { FooterComponent } from './footer/footer.component';
@@ -47,6 +54,13 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     MainUserComponent,
     PendingEventsComponent,
     LoggedAsideComponent,
+    FootherComponent,
+    ClubAffilatesComponent,
+    HeaderComponent,
+    WhoAreWeComponent,
+    FAQComponent,
+    ContactComponent,
+    HomeComponent,
     SignInComponent,
     ClubHeaderComponent,
     FooterComponent,
