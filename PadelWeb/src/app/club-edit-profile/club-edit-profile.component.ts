@@ -19,7 +19,6 @@ export class ClubEditProfileComponent implements OnInit {
 
   model = {
     name: "",
-    email: "",
     phone: ""
   }
   club!: Club;
@@ -31,15 +30,26 @@ export class ClubEditProfileComponent implements OnInit {
       if(user) {
         this.club = user;
       }
-    }) 
-  
+    })
+
   }
 
   ngOnInit(): void {
   }
 
   submit(): void {
+    if(!this.club) return;
 
+    const data: any = {};
+
+    if(this.model.name.length > 0)
+      data.name = this.model.name;
+
+    if(this.model.phone.length > 0)
+      data.phone = this.model.phone;
+
+    const clubRef = this.afs.doc(`Club/${this.club.uid}`);
+    clubRef.set(data, {merge: true});
   }
 
   uploadFile(event: Event) {
