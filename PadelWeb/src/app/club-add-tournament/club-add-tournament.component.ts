@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {environment} from "../../environments/environment";
+import { ClubAuthService } from '../services/club-auth.service';
+import { ClubService } from '../services/club.service';
+import { Club } from '../types/club';
 import { Tournament } from '../types/tournament';
 
 @Component({
@@ -12,20 +15,28 @@ import { Tournament } from '../types/tournament';
 })
 export class ClubAddTournamentComponent implements OnInit {
 
+  private club!: Club | undefined;
+
   tournament: Tournament = {
     name: "",
     day: new Date(),
     players: 2,
     ranked: false,
-    comments: ""
+    comments: "",
+    img: "../../assets/images/tournament.svg"
   }
 
-  constructor() { }
+  constructor(private auth: ClubAuthService, private clubService: ClubService) { }
 
   ngOnInit(): void {
+    this.auth.user$.subscribe(
+      (club) => { this.club = club }
+    );
   }
 
   submit(): void {
-    console.log(this.tournament);
+    console.log(this.club);
+    this.club?.active.push(this.tournament);
+    this.clubService.updateClub(this.club?.uid as string, { active: this.club?.active });
   }
 }

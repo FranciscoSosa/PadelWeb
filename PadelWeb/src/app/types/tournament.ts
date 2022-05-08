@@ -5,4 +5,5 @@ export interface Tournament {
   players: number,
   ranked: boolean,
   comments: string,
+  img: string
 }

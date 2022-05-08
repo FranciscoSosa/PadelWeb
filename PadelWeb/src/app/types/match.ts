@@ -1,4 +1,8 @@
 export interface Match {
-  img: string,
-  data: string
+  id?: string,
+  dayHour: string,
+  players: string [],
+  ranked: boolean,
+  ranking: string,
+  img: string
 }
