@@ -4,6 +4,7 @@ import {User} from "../types/user";
 import {HttpClient} from "@angular/common/http";
 import {AuthService} from "../services/auth.service";
 import {Match} from "../types/match";
+import {Tournament} from "../types/tournament";
 
 @Component({
   selector: 'app-user-statistics',
@@ -16,7 +17,6 @@ import {Match} from "../types/match";
 export class UserStatisticsComponent implements OnInit {
 
   userInfo!: User;
-  history!: Match[];
 
   constructor(public auth: AuthService) {
   }
@@ -25,9 +25,12 @@ export class UserStatisticsComponent implements OnInit {
     this.auth.user$.subscribe(async user => {
       if(user) {
         this.userInfo = user;
-        this.history = [];
       }
     });
+  }
+
+  isMatch(event: Match | Tournament) {
+    return 'dayHour' in event;
   }
 
 }

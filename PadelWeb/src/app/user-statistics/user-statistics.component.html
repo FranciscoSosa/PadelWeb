@@ -13,9 +13,30 @@
   </section>
   <section id="match-history" class="history-display content-section vertical-flex">
     <h3 style="margin-top: .5em">Partidos anteriores</h3>
-<!--    <div class="match-info-display horizontal-flex" *ngFor="let match of history">-->
-<!--      {{ match.court }}-->
-<!--    </div>-->
+    <ng-container *ngFor="let event of userInfo.history">
+      <div class="match-info-display horizontal-flex">
+        <ng-container *ngIf="isMatch(event); then match else tournament"></ng-container>
+        <ng-template #match>
+          <img style="margin: 10px;" [src]="$any(event).img">
+          <p style="margin: 10px;">{{$any(event).dayHour}}</p>
+          <p *ngIf="$any(event).ranked; else clasificatorio">Clasificatorio</p>
+          <ng-template #clasificatorio>
+            <p>No Clasificatorio</p>
+          </ng-template>
+          <p style="margin: 10px;" >{{$any(event).ranking}}</p>
+        </ng-template>
+        <ng-template #tournament>
+          <img style="margin: 10px;" [src]="$any(event).img">
+          <p style="margin: 10px;">Nombre: {{$any(event).name}}</p>
+          <p style="margin: 10px;">{{$any(event).day}}</p>
+          <p style="margin: 10px;">Total de Jugadores: {{$any(event).name}}</p>
+          <p *ngIf="$any(event).ranked; else clasificatorio">Clasificatorio</p>
+          <ng-template #clasificatorio>
+            <p>No Clasificatorio</p>
+          </ng-template>
+        </ng-template>
+      </div>
+    </ng-container>
   </section>
 
   <section class="statistics-display">
