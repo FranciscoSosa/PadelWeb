@@ -12,7 +12,7 @@ html, body {
 }
 
 p {
-  margin-bottom: .75em;
+  margin-bottom: 0em;
 }
 
 input {
@@ -515,9 +515,9 @@ aside.content-section {
 
 @media (max-width: 720px) {
 
-  .days-grid > label {
+/*   .days-grid > label {
     display: none;
-  }
+  } */
 
   .days-grid {
     display: flex;

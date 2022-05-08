@@ -22,8 +22,11 @@ import { ClubConfirmResultComponent } from './club-confirm-result/club-confirm-r
 import { ClubMatchResultsComponent } from './club-match-results/club-match-results.component';
 import {SignInSelectorComponent} from "./sign-in-selector/sign-in-selector.component";
 import { ClubSignInComponent } from './club-sign-in/club-sign-in.component';
+import { UserChooseDayAndClubComponent } from './user-choose-day-and-club/user-choose-day-and-club.component';
+import { UserChooseMatchComponent } from './user-choose-match/user-choose-match.component';
 import { ClubRegisterComponent } from './club-register/club-register.component';
 import {SignUpComponent} from "./sign-up/sign-up.component";
+
 
 const routes: Routes = [
   {
@@ -67,7 +70,16 @@ const routes: Routes = [
       {
         path: "statistics",
         component: UserStatisticsComponent
+      },
+      {
+        path: "chooseDay",
+        component: UserChooseDayAndClubComponent
+      },
+      {
+        path: "chooseMatch/:uid",
+        component: UserChooseMatchComponent
       }
+
     ],
   },
   {
