@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import {environment} from "../../environments/environment";
 import { ClubAuthService } from '../services/club-auth.service';
 import { ClubService } from '../services/club.service';
@@ -46,7 +47,8 @@ export class ClubAddMatchComponent implements OnInit {
     .map(() => new Array(this.daysPerWeek).fill(false));
 
 
-  constructor(private auth: ClubAuthService, private clubService: ClubService) { }
+  constructor(private auth: ClubAuthService, private clubService: ClubService,
+     private router: Router) { }
 
   ngOnInit(): void {
     this.auth.user$.subscribe(
@@ -75,6 +77,7 @@ export class ClubAddMatchComponent implements OnInit {
       i++;
       j = 0;
     }
+    this.router.navigate(["/club/confirm-match"]);
   }
 
 
