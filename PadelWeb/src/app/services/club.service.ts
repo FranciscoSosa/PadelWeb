@@ -30,4 +30,8 @@ export class ClubService {
   getClubs(){
     return this.db.collection<Club>(this.dbPath).valueChanges()
   }
+  getClubByUid(uid: string | null){
+    return this.db.collection<Club>(this.dbPath,  ref => ref.where('uid', '==', uid)).valueChanges();
+  }
+
 }
