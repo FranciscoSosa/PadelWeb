@@ -48,7 +48,7 @@ export class AuthService {
       name,
       phone,
       email: email!,
-      img: "assets/images/user-profile-picture.svg",
+      img: "assets/images/User-Profile-Picture.svg",
       playedGames: 0,
       wonGames: 0
     }
