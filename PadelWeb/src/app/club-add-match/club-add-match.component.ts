@@ -64,8 +64,8 @@ export class ClubAddMatchComponent implements OnInit {
             dayHour: `Día ${day} y hora ${hour}`,
             players: [],
             ranked: true,
-            ranking: "Oro", 
-            img: "../../assets/images/match.svg"
+            ranking: "Oro",
+            img: "assets/images/match.svg"
           }
           this.club?.active.push(match);
           this.clubService.updateClub(this.club?.uid as string, { active: this.club?.active });
