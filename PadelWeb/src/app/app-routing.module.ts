@@ -26,6 +26,7 @@ import { UserChooseDayAndClubComponent } from './user-choose-day-and-club/user-c
 import { UserChooseMatchComponent } from './user-choose-match/user-choose-match.component';
 import { ClubRegisterComponent } from './club-register/club-register.component';
 import {SignUpComponent} from "./sign-up/sign-up.component";
+import { UserEventsComponent } from './user-events/user-events.component';
 
 
 const routes: Routes = [
@@ -78,8 +79,11 @@ const routes: Routes = [
       {
         path: "chooseMatch/:uid",
         component: UserChooseMatchComponent
+      },
+      {
+        path: "events",
+        component: UserEventsComponent
       }
-
     ],
   },
   {

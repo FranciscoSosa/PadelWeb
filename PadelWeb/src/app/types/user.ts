@@ -13,7 +13,6 @@ export interface User {
   wonGames: number,
   rank?: string,
   points?: number
-  history?: DocumentReference<Match>[],
-  matches?: Match[],
-  tournaments?: Tournament[]
+  history: (Tournament | Match)[],
+  pending: (Tournament | Match)[]
 }

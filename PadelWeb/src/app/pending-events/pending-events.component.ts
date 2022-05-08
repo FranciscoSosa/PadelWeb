@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PendingEventsService } from '../services/pending-events.service';
 import {environment} from "../../environments/environment";
 import { Club } from '../types/club';
 import { ClubAuthService } from '../services/club-auth.service';
