@@ -22,8 +22,6 @@ export class UserEditProfileComponent {
 
   model = {
     name: "",
-    surname: "",
-    email: "",
     phone: ""
   }
 
@@ -38,7 +36,18 @@ export class UserEditProfileComponent {
   }
 
   submit(): void {
+    if(!this.user) return;
 
+    const data: any = {};
+
+    if(this.model.name.length > 0)
+      data.name = this.model.name;
+
+    if(this.model.phone.length > 0)
+      data.phone = this.model.phone;
+
+    const userRef = this.afs.doc(`User/${this.user.uid}`);
+    userRef.set(data, {merge: true});
   }
 
   uploadFile(event: Event) {
