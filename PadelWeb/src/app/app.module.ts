@@ -19,6 +19,13 @@ import { SignInComponent } from './sign-in/sign-in.component';
 
 import { LoggedAsideComponent } from './logged-aside/logged-aside.component';
 import { PendingEventsComponent } from './pending-events/pending-events.component';
+import { FootherComponent } from './foother/foother.component';
+import { ClubAffilatesComponent } from './club-affilates/club-affilates.component';
+import { HeaderComponent } from './header/header.component';
+import { WhoAreWeComponent } from './who-are-we/who-are-we.component';
+import { FAQComponent } from './faq/faq.component';
+import { ContactComponent } from './contact/contact.component';
+import { HomeComponent } from './home/home.component';
 import { ClubHeaderComponent } from './UserHeader/club-header/club-header.component';
 
 import { FooterComponent } from './footer/footer.component';
@@ -31,8 +38,10 @@ import { ClubAddTournamentComponent } from './club-add-tournament/club-add-tourn
 import { ClubAddMatchComponent } from './club-add-match/club-add-match.component';
 import { ClubConfirmResultComponent } from './club-confirm-result/club-confirm-result.component';
 import { ClubMatchResultsComponent } from './club-match-results/club-match-results.component';
+import { SignInSelectorComponent } from './sign-in-selector/sign-in-selector.component';
 import { ClubSignInComponent } from './club-sign-in/club-sign-in.component';
 import { ClubRegisterComponent } from './club-register/club-register.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 
 
@@ -45,6 +54,13 @@ import { ClubRegisterComponent } from './club-register/club-register.component';
     MainUserComponent,
     PendingEventsComponent,
     LoggedAsideComponent,
+    FootherComponent,
+    ClubAffilatesComponent,
+    HeaderComponent,
+    WhoAreWeComponent,
+    FAQComponent,
+    ContactComponent,
+    HomeComponent,
     SignInComponent,
     ClubHeaderComponent,
     FooterComponent,
@@ -56,8 +72,10 @@ import { ClubRegisterComponent } from './club-register/club-register.component';
     ClubAddMatchComponent,
     ClubConfirmResultComponent,
     ClubMatchResultsComponent,
+    SignInSelectorComponent,
     ClubSignInComponent,
-    ClubRegisterComponent
+    ClubRegisterComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
