@@ -44,6 +44,7 @@ import { UserChooseDayAndClubComponent } from './user-choose-day-and-club/user-c
 import { UserChooseMatchComponent } from './user-choose-match/user-choose-match.component';
 import { ClubRegisterComponent } from './club-register/club-register.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { UserEventsComponent } from './user-events/user-events.component';
 
 
 
@@ -80,7 +81,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     SignInSelectorComponent,
     ClubSignInComponent,
     ClubRegisterComponent,
-    SignUpComponent
+    SignUpComponent,
+    UserEventsComponent
   ],
   imports: [
     BrowserModule,

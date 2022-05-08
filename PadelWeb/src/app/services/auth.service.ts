@@ -50,7 +50,9 @@ export class AuthService {
       email: email!,
       img: "assets/images/User-Profile-Picture.svg",
       playedGames: 0,
-      wonGames: 0
+      wonGames: 0,
+      history: [],
+      pending: []
     }
 
     userRef.set(data, {merge: true})

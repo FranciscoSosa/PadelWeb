@@ -26,12 +26,6 @@ export class UserStatisticsComponent implements OnInit {
       if(user) {
         this.userInfo = user;
         this.history = [];
-
-        for(let ref of user.history!) {
-          this.history.push((await ref.get()).data()!);
-        }
-
-        console.log(this.history)
       }
     });
   }
