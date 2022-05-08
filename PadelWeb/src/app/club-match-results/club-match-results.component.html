@@ -4,6 +4,10 @@
         <section class="add-result-grid">
             <div class="players-result">
                 <h2 class="header-mb">Participantes</h2>
+                <div *ngFor="let player of players; let playerIndex=index;" class="horizontal-flex">
+                    <input type="checkbox" name="{{player.uid}}" id="{{player.uid}}" [(ngModel)]="playerCheck[playerIndex]">
+                    <label for="{{player.uid}}">{{$any(player).name}}</label>
+                </div>
             </div>
             <div class="result">
                 <h2 class="header-mb">Resultado</h2>

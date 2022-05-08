@@ -51,6 +51,8 @@ export class UserChooseMatchComponent implements OnInit {
       event.players.push(this.user!.uid);
       if(event.players.length == 4){
         this.club.active.splice(index, 1);
+        this.club.pending.push(event);
+        this.clubService.updateClub(this.url!, {pending: this.club.pending});
       }
       this.clubService.updateClub(this.url!, {active: this.club.active});
     }

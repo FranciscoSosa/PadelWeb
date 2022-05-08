@@ -18,4 +18,8 @@ export class UserService {
   deleteUser(id: string){
     return this.db.collection<User>(this.dbPath).doc(id).delete();
   }
+
+  getUserByUid(uid: string){
+    return this.db.collection<User>(this.dbPath,  ref => ref.where('uid', '==', uid)).valueChanges();
+  }
 }
