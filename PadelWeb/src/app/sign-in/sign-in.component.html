@@ -1,7 +1,7 @@
 <div class="login-image main-container bg-image vertical-flex horizontal-flex">
   <div class="sign-log-menu rounded-corners">
     <h1 class="header-mb">Iniciar sesión</h1>
-    <form d="login-form">
+    <form d="login-form" #signInForm="ngForm">
       <input type="email"
              [(ngModel)]="model.email"
              name="email"
@@ -16,6 +16,7 @@
              placeholder="Contraseña"
              required><br>
       <input id="login-button"
+             [disabled]="signInForm.invalid"
              type="submit"
              (click)="login()"
              value="Iniciar sesión"

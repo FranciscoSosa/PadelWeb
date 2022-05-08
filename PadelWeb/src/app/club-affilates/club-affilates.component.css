@@ -1,0 +1,12 @@
+@media (max-width: 540px) {
+
+  .fphoto-cancha {
+    aspect-ratio: 16 / 9;
+    height: 15em;
+  }
+}
+
+h2 {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}

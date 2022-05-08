@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { PendingEventsService } from '../services/pending-events.service';
 import {environment} from "../../environments/environment";
+import { Club } from '../types/club';
+import { ClubAuthService } from '../services/club-auth.service';
+import { Tournament } from '../types/tournament';
+import { Match } from '../types/match';
 
 @Component({
   selector: 'app-pending-events',
@@ -11,19 +15,21 @@ import {environment} from "../../environments/environment";
   }
 })
 export class PendingEventsComponent implements OnInit {
-  private _pendingEvents: any;
 
-  constructor(private pendingService: PendingEventsService) {}
+  club!: Club | undefined;
 
-  get pendingEvents(){
-    return this._pendingEvents;
-  }
+  constructor(private auth: ClubAuthService) {}
 
   ngOnInit(): void {
-    this.pendingService.getPendingEvents()
-      .subscribe(club => {
-        this._pendingEvents = club.pending;
-      });
+    this.auth.user$.subscribe(
+      (club) => { 
+        this.club = club;
+        console.log(this.club);
+      }
+    );
   }
 
+  isMatch(event: Tournament | Match){
+    return 'dayHour' in event;
+  }
 }

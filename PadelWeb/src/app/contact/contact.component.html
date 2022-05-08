@@ -1,0 +1,28 @@
+<app-header></app-header>
+<div class="horizontal-flex">
+  <img id="contact-image" src="assets/images/atencion-al-cliente 1.png" alt="atencionClient">
+</div>
+<article>
+  <h2 class="text-align-center">Contacto</h2>
+  <div class="center-child">
+    <form>
+      <input class="col" type="text" name="nombre" placeholder="Tu Nombre*" required
+             oninvalid="setCustomValidity=('Este Campo es necesario, introduzca el nombre por favor')"><br>
+      <input class="col" type="text" name="email" placeholder="Tu Correo Electronico*"
+             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$" required type="email"
+             oninvalid="setCustomValidity=('Introduza en formato XXX@XXX.com')"><br>
+      <input type="text" name="telefono" placeholder="Tu Telefono*" pattern="[1-9][0-9]{8}" required
+             oninvalid="setCustomValidity('Introduzca los numeros por favor')"><br>
+      <input type="text" name="asunto" placeholder="Asunto" required
+             oninvalid="setCustomValidity=('Este Campo es necesario, introduzca el asunto por favor')"><br>
+      <textarea name="message" id="message" cols="30" rows="10" placeholder="Mensaje" required
+                oninvalid="setCustomValidity=('Este Campo es necesario, introduzca el mensaje por favor')"></textarea><br>
+      <input type="checkbox" id="acepto" name="aceptarPol" required
+             oninvalid="setCustomValidity=('Hay que aceptar la Política de Privacidad')"> He leído y acepto la
+      Política de Privacidad
+      <br>
+      <input type="submit" id="button" value="Enviar" class="rounded-corners">
+    </form>
+  </div>
+</article>
+<app-foother></app-foother>
