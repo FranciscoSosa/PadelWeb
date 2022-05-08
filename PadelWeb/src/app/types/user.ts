@@ -6,8 +6,9 @@ import DocumentReference = firebase.firestore.DocumentReference;
 export interface User {
   uid: string,
   email: string,
-  name?: string,
-  img?: string,
+  name: string,
+  img: string,
+  phone: string,
   playedGames: number,
   wonGames: number,
   rank?: string,

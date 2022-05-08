@@ -25,12 +25,13 @@ export class AuthService {
     );
   }
 
-  async signUp(email: string, password: string) {
+  async signUp(signUpInfo: {email: string, password: string, name: string, phone: string}) {
+    const {email, password, name, phone} = signUpInfo;
     try {
       const credentials = await this.afAuth.createUserWithEmailAndPassword(email, password);
 
       if(credentials.user)
-        this.updateUser(credentials.user);
+        this.updateUser(credentials.user, name, phone);
     } catch (err) {
       console.log(err)
     }
@@ -40,13 +41,16 @@ export class AuthService {
     await this.afAuth.signInWithEmailAndPassword(email, password);
   }
 
-  private updateUser({uid, email}: firebase.default.User) {
+  private updateUser({uid, email}: firebase.default.User, name: string, phone: string) {
     const userRef = this.afs.doc<User>(`User/${uid}`)
     const data: User = {
       uid,
+      name,
+      phone,
       email: email!,
-      playedGames: 1,
-      wonGames: 1
+      img: "assets/images/user-profile-picture.svg",
+      playedGames: 0,
+      wonGames: 0
     }
 
     userRef.set(data, {merge: true})
