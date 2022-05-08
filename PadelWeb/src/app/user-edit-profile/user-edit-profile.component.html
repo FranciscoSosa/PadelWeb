@@ -45,6 +45,13 @@
       </div>
     </div>
 
-    <button class="user-edit-form">GUARDAR LOS CAMBIOS</button>
+    <button class="user-edit-form" >GUARDAR LOS CAMBIOS</button>
+    <input type="file"
+           #inputFile
+           style="display: none"
+           (change)="uploadFile($event)">
+    <button class="user-edit-form" (click)="inputFile.click()">
+      CAMBIAR IMAGEN
+    </button>
   </form>
 </div>
