@@ -15,6 +15,8 @@ import { ClubAddMatchComponent } from './club-add-match/club-add-match.component
 import { ClubConfirmResultComponent } from './club-confirm-result/club-confirm-result.component';
 import { ClubMatchResultsComponent } from './club-match-results/club-match-results.component';
 import {SignInSelectorComponent} from "./sign-in-selector/sign-in-selector.component";
+import { ClubSignInComponent } from './club-sign-in/club-sign-in.component';
+import { ClubRegisterComponent } from './club-register/club-register.component';
 
 const routes: Routes = [
   {
@@ -24,6 +26,13 @@ const routes: Routes = [
   {
     path: "sign-in-selector",
     component: SignInSelectorComponent
+  },
+    path: "club-sign-in",
+    component: ClubSignInComponent
+  },
+  {
+    path: "club-register",
+    component: ClubRegisterComponent
   },
   {
     path: "user",
