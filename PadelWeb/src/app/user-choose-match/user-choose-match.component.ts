@@ -24,7 +24,7 @@ export class UserChooseMatchComponent implements OnInit {
   user: User | undefined;
   
   constructor(private router: ActivatedRoute, private clubService: ClubService,
-    private auth: AuthService, private userService: UserService) {
+    private auth: AuthService, private userService: UserService, private navigator: Router) {
   }
   ngOnInit(): void {
     this.url = this.router.snapshot.paramMap.get('uid');
@@ -54,5 +54,6 @@ export class UserChooseMatchComponent implements OnInit {
       }
       this.clubService.updateClub(this.url!, {active: this.club.active});
     }
+    this.navigator.navigate(["/user/events"]);
   }
 }

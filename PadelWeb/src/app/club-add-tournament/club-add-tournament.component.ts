@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import {environment} from "../../environments/environment";
 import { ClubAuthService } from '../services/club-auth.service';
 import { ClubService } from '../services/club.service';
@@ -26,7 +27,8 @@ export class ClubAddTournamentComponent implements OnInit {
     img: "assets/images/tournament.svg"
   }
 
-  constructor(private auth: ClubAuthService, private clubService: ClubService) { }
+  constructor(private auth: ClubAuthService, private clubService: ClubService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.auth.user$.subscribe(
@@ -38,5 +40,6 @@ export class ClubAddTournamentComponent implements OnInit {
     console.log(this.club);
     this.club?.active.push(this.tournament);
     this.clubService.updateClub(this.club?.uid as string, { active: this.club?.active });
+    this.router.navigate(["/club/confirm-match"]);
   }
 }
