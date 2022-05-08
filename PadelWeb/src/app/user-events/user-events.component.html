@@ -1,0 +1,31 @@
+<main class="mcbackgorund content-section col-12 col-lg-9">
+    <form>
+        <section class="rounded-corners">
+            <h1 class="schedule-header">Eventos Pendientes</h1>
+
+            <div class="match horizontal-flex" *ngFor="let event of user?.pending">
+                <span class="horizontal-flex" style="color: black;" *ngIf="isMatch(event); else tournament">
+                    <img style="margin: 10px;" [src]="$any(event).img">
+                    <p style="margin: 10px;">{{$any(event).dayHour}}</p> 
+                    <p *ngIf="$any(event).ranked; else clasificatorio">Clasificatorio</p>
+                    <ng-template #clasificatorio>
+                        <p>No Clasificatorio</p>
+                    </ng-template>
+                    <p style="margin: 10px;" >{{$any(event).ranking}}</p>
+                </span>
+                <ng-template #tournament>
+                    <div style="color: black;" class="horizontal-flex">
+                        <img style="margin: 10px;" [src]="$any(event).img">
+                        <p style="margin: 10px;">Nombre: {{$any(event).name}}</p>
+                        <p style="margin: 10px;">{{$any(event).day}}</p>
+                        <p style="margin: 10px;">Total de Jugadores: {{$any(event).name}}</p>
+                        <p *ngIf="$any(event).ranked; else clasificatorio">Clasificatorio</p>
+                        <ng-template #clasificatorio>
+                            <p>No Clasificatorio</p>
+                        </ng-template>
+                    </div> 
+                </ng-template>
+            </div>
+        </section>
+    </form>
+</main>

@@ -1,7 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {environment} from "../../environments/environment";
-import {User} from "../user/user";
+import {User} from "../types/user";
 import {HttpClient} from "@angular/common/http";
+import {AuthService} from "../services/auth.service";
+import {Match} from "../types/match";
 
 @Component({
   selector: 'app-user-statistics',
@@ -14,13 +16,17 @@ import {HttpClient} from "@angular/common/http";
 export class UserStatisticsComponent implements OnInit {
 
   userInfo!: User;
+  history!: Match[];
 
-  constructor(private http: HttpClient) {
+  constructor(public auth: AuthService) {
   }
 
   ngOnInit(): void {
-    this.http.get<User>("assets/json/user.json").subscribe(user => {
-      this.userInfo = user;
+    this.auth.user$.subscribe(async user => {
+      if(user) {
+        this.userInfo = user;
+        this.history = [];
+      }
     });
   }
 

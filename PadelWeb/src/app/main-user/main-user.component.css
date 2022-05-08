@@ -1,5 +1,6 @@
 @import "../../styles.css";
 
-router-outlet + * {
-  
+.logged-aside {
+  align-items: flex-start;
+  justify-content: center;
 }

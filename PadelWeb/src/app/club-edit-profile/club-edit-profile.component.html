@@ -1,0 +1,31 @@
+<div style="min-height: 50vh" class="content-section">
+  <form style="height:100%" class="vertical-flex" (ngSubmit)="submit()" #clubEditProfile="ngForm">
+    <div class="user-edit-form container-fluid">
+      <div class="row">
+        <div class="col-md-3 col-12 m-auto">
+          <label for="name">Nombre:</label>
+        </div>
+        <div class="col-md-7 col-12 m-auto">
+          <input type="text" id="name" [(ngModel)]="model.name" name="name">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-12 m-auto">
+          <label for="phone">Teléfono:</label>
+        </div>
+        <div class="col-md-7 col-12 m-auto">
+          <input type="text" id="phone" [(ngModel)]="model.phone" name="phone" #phone="ngModel" pattern="[1-9][0-9]{8}">
+        </div>
+      </div>
+      <div *ngIf="phone.touched && phone.errors?.['pattern']" class="formError row col-11 ml-auto mr-auto mt-1 mb-1">
+        ¡El teléfono debe tener un formato válido!
+      </div>
+    </div>
+
+    <button class="user-edit-form" [disabled]="clubEditProfile.invalid" >GUARDAR LOS CAMBIOS</button>
+    <input type="file" #inputFile style="display: none" (change)="uploadFile($event)">
+    <button class="user-edit-form" (click)="inputFile.click()">
+      CAMBIAR IMAGEN
+    </button>
+  </form>
+</div>

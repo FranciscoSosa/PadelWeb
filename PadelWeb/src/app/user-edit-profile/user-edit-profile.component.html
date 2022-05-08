@@ -11,30 +11,26 @@
       </div>
       <div class="row">
         <div class="col-md-3 col-12 m-auto">
-          <label for="surname">Apellido:</label>
-        </div>
-        <div class="col-md-7 col-12 m-auto">
-          <input type="text" id="surname" [(ngModel)]="model.surname" name="surname">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3 col-12 m-auto">
-          <label for="email">Email:</label>
-        </div>
-        <div class="col-md-7 col-12 m-auto">
-          <input type="text" id="email" [(ngModel)]="model.email" name="email">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3 col-12 m-auto">
           <label for="phone">Teléfono:</label>
         </div>
         <div class="col-md-7 col-12 m-auto">
-          <input type="text" id="phone" [(ngModel)]="model.phone" name="phone">
+          <input type="text" id="phone" [(ngModel)]="model.phone" name="phone" #phone="ngModel"
+                 pattern="[1-9][0-9]{8}">
         </div>
+      </div>
+      <div *ngIf="phone.touched && phone.errors?.['pattern']"
+           class="formError row col-11 ml-auto mr-auto mt-1 mb-1">
+        ¡El teléfono debe tener un formato válido!
       </div>
     </div>
 
-    <button class="user-edit-form">GUARDAR LOS CAMBIOS</button>
+    <button class="user-edit-form" [disabled]="userEditProfile.invalid">GUARDAR LOS CAMBIOS</button>
+    <input type="file"
+           #inputFile
+           style="display: none"
+           (change)="uploadFile($event)">
+    <button class="user-edit-form" (click)="inputFile.click()">
+      CAMBIAR IMAGEN
+    </button>
   </form>
 </div>

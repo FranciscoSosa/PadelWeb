@@ -1,0 +1,11 @@
+.grid-header {
+  grid-column: 1 / span 5;
+  display: grid;
+  grid-template-columns: 2fr 3fr 3fr;
+}
+
+
+footer {
+  background-color: #C4C4C4;
+  margin-top: 5rem;
+}

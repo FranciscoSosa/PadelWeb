@@ -1,0 +1,38 @@
+.text-align-center {
+  text-align: center;
+}
+
+.center-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  margin-bottom: 1em;
+}
+input[type="submit"] {
+  padding: .25em;
+}
+input[type="text"],
+input[type="number"] {
+  padding: .125em;
+}
+h2 {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+.horizontal-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media (max-width: 540px) {
+
+  #contact-image {
+    aspect-ratio: 16 / 9;
+    height: 15em;
+  }
+}

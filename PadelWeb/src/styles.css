@@ -12,7 +12,7 @@ html, body {
 }
 
 p {
-  margin-bottom: .75em;
+  margin-bottom: 0em;
 }
 
 input {
@@ -39,6 +39,7 @@ h2 {
 }
 
 .match-hour + label {
+  width: 100%;
   cursor: pointer;
   border: 1px solid black;
   color: black;
@@ -253,7 +254,7 @@ h2 {
   background-color: rgba(0, 0, 0, 0);
 }
 
-.home-nav span > a {;
+.home-nav span > a {
   text-decoration: none;
   color: black;
   font-weight: bold;
@@ -472,7 +473,6 @@ button.user-edit-form {
 
 aside.content-section {
   font-size: 0.9em;
-  height: 60%;
 }
 
 .newMenuStyle {
@@ -514,13 +514,10 @@ aside.content-section {
 }
 
 @media (max-width: 720px) {
-  .active {
-    display: inline !important;
-  }
 
-  .days-grid > label {
+/*   .days-grid > label {
     display: none;
-  }
+  } */
 
   .days-grid {
     display: flex;
@@ -550,7 +547,7 @@ aside.content-section {
   }
 
   .schedule-grid > span {
-    display: none;
+    /*display: none;*/
   }
 
 }
