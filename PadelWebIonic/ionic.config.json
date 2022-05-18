@@ -1,0 +1,7 @@
+{
+  "name": "PadelWeb",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
