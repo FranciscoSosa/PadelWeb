@@ -1,20 +1,20 @@
 import {Component} from '@angular/core';
-import {environment} from "../../environments/environment";
-import {User} from "../types/user";
-import {AuthService} from "../services/auth.service";
-import {Match} from "../types/match";
-import {Tournament} from "../types/tournament";
+import {environment} from "src/environments/environment";
+import {User} from "src/app/types/user";
+import {AuthService} from "src/app/services/auth.service";
+import {Match} from "src/app/types/match";
+import {Tournament} from "src/app/types/tournament";
 
 @Component({
   selector: 'app-user-statistics',
-  templateUrl: './user-statistics.page.html',
-  styleUrls: ['./user-statistics.page.css'],
+  templateUrl: './user-statistics.component.html',
+  styleUrls: ['./user-statistics.component.css'],
   host: {
     class: environment.userPageLayout
   }
 })
 // @ts-ignore
-export class UserStatisticsPage implements ionicViewDidEnter {
+export class UserStatisticsComponent implements ionicViewDidEnter {
 
   userInfo!: User;
 

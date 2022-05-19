@@ -78,7 +78,7 @@ h2 {
 }
 
 .bg-image {
-  background-position: center center;
+  background-position: top right -20em;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
