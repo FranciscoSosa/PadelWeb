@@ -6,7 +6,7 @@ import {MainUserPage} from "./main-user/main-user.page";
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'main-user',
+    redirectTo: '/main-user/statistics',
     pathMatch: 'full'
   },
   {
