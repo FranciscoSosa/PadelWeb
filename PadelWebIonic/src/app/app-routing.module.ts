@@ -13,6 +13,10 @@ const routes: Routes = [
     path: 'main-user',
     loadChildren: () => import('./main-user/main-user.module').then(m => m.MainUserModule)
   },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
 ];
 
 @NgModule({
