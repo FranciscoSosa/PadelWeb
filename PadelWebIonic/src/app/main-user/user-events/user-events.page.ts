@@ -3,6 +3,7 @@ import { AuthService } from 'src/app/services/auth.service';
 import { Match } from 'src/app/types/match';
 import { Tournament } from 'src/app/types/tournament';
 import { User } from 'src/app/types/user';
+import {PendingEventsService} from "../../services/pending-events.service";
 
 @Component({
   selector: 'app-user-events',
@@ -13,7 +14,10 @@ export class UserEventsPage implements OnInit {
 
   user: User | undefined;
 
-  constructor(private auth: AuthService) { }
+  constructor(
+    private auth: AuthService,
+    private pendingEvents: PendingEventsService
+  ) { }
 
   ngOnInit() {
     this.auth.user$.subscribe(
