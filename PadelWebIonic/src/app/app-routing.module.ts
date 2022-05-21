@@ -6,7 +6,7 @@ import {MainUserPage} from "./main-user/main-user.page";
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/main-user/statistics',
+    redirectTo: '/home',
     pathMatch: 'full'
   },
   {
@@ -28,6 +28,10 @@ const routes: Routes = [
   {
     path: 'home-header',
     loadChildren: () => import('./home-header/home-header.module').then( m => m.HomeHeaderPageModule)
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
 ];
 
