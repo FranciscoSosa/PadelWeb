@@ -26,7 +26,7 @@ const routes: Routes = [
     loadChildren: () => import('./affiliated-clubs/affiliated-clubs.module').then( m => m.AffiliatedClubsPageModule)
   },
   {
-    path: 'home',
+    path: 'home-header',
     loadChildren: () => import('./home-header/home-header.module').then( m => m.HomeHeaderPageModule)
   },
 ];
