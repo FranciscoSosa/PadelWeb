@@ -13,6 +13,10 @@ const routes: Routes = [
         component: UserStatisticsComponent
       }
     ]
+  },
+  {
+    path: 'userChooseClub',
+    loadChildren: () => import('./user-choose-day-and-club/user-choose-day-and-club.module').then( m => m.UserChooseDayAndClubPageModule)
   }
 ];
 

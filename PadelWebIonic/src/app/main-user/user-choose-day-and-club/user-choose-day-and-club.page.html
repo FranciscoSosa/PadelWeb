@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>user-choose-day-and-club</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+    <h1 class="schedule-header">Selecciona el club</h1>
+    <ion-list>
+      <ion-item *ngFor="let club of clubs">
+        <ion-avatar slot="end">
+          <img [src]="club.img" style="cursor: pointer;" [routerLink]="['/main-user/chooseMatch',club.uid]">
+        </ion-avatar>
+        <ion-label style="cursor: pointer;" [routerLink]="['/main-user/chooseMatch',club.uid]"> <p>{{club.name}}</p></ion-label>
+      </ion-item>
+    </ion-list>
+  </form>
+</ion-content>
