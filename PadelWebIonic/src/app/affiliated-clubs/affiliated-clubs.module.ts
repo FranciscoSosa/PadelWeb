@@ -8,6 +8,7 @@ import { AffiliatedClubsPageRoutingModule } from './affiliated-clubs-routing.mod
 
 import { AffiliatedClubsPage } from './affiliated-clubs.page';
 import {MainUserModule} from "../main-user/main-user.module";
+import { HomeHeaderPageModule } from '../home-header/home-header.module';
 
 @NgModule({
     imports: [
@@ -15,7 +16,8 @@ import {MainUserModule} from "../main-user/main-user.module";
         FormsModule,
         IonicModule,
         AffiliatedClubsPageRoutingModule,
-        MainUserModule
+        MainUserModule,
+        HomeHeaderPageModule
     ],
   declarations: [AffiliatedClubsPage]
 })

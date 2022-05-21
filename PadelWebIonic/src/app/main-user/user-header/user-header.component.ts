@@ -13,9 +13,4 @@ export class UserHeaderComponent implements OnInit {
 
     ngOnInit(): void {
   }
-
-/*   async openMenu() {
-    let open = await this.menu.open();
-    console.log(open);
-  } */
 }

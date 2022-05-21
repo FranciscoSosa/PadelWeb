@@ -7,13 +7,16 @@ import { MainUserPage } from './main-user.page';
 import { UserStatisticsComponent } from "./user-statistics/user-statistics.component";
 import { UserHeaderComponent } from './user-header/user-header.component';
 import {EditProfileComponent} from "./edit-profile/edit-profile.component";
+import { UserHeaderModule } from './user-header/user-header.module';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MainUserRoutingModule
+    MainUserRoutingModule,
+    UserHeaderModule
   ],
   exports: [
     UserHeaderComponent
