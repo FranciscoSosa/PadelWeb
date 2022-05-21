@@ -10,19 +10,15 @@
           <ion-icon name="person" slot="start"></ion-icon>
           <ion-label>Editar perfil</ion-label>
         </ion-item>
-        <ion-item>
+        <ion-item [routerLink]="['/main-user/statistics']">
           <ion-icon name="stats-chart" slot="start"></ion-icon>
           <ion-label>Estadísticas</ion-label>
         </ion-item>
-        <ion-item>
+        <ion-item [routerLink]="['/main-user/userChooseClub']">
           <ion-icon name="tennisball" slot="start"></ion-icon>
           <ion-label>Partidos</ion-label>
         </ion-item>
-        <ion-item>
-          <ion-icon name="trophy" slot="start"></ion-icon>
-          <ion-label>Torneos</ion-label>
-        </ion-item>
-        <ion-item>
+        <ion-item [routerLink]="['/main-user/events']">
           <ion-icon name="clipboard" slot="start"></ion-icon>
           <ion-label>Pendiente</ion-label>
         </ion-item>
