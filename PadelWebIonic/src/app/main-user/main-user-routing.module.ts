@@ -30,6 +30,10 @@ const routes: Routes = [
   {
     path: 'events',
     loadChildren: () => import('./user-events/user-events.module').then( m => m.UserEventsPageModule)
+  },
+  {
+    path: 'eventInfo/:uid/:index',
+    loadChildren: () => import('./user-event-info/user-event-info.module').then( m => m.UserEventInfoPageModule)
   }
 ];
 
