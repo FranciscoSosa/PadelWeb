@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>user-choose-match</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+    <h1 class="schedule-header">Selecciona el Partido del Club</h1>
+    <ion-list>
+      <div *ngFor="let event of club?.active; let eventIndex = index">
+        <ion-item *ngIf="isMatch(event); else tournament">
+          <ion-avatar class="match-border" slot="start">
+            <img [src]="$any(event).img">
+          </ion-avatar>
+          <ion-label>
+            <p>{{$any(event).dayHour}}</p>
+            <p *ngIf="$any(event).ranked; else clasificatorio">Clasificatorio</p>
+            <ng-template #clasificatorio>
+              <p>No Clasificatorio</p>
+            </ng-template>
+            <p>{{$any(event).ranking}}</p>
+            <ion-button size="small" color="success" (click)="select(eventIndex)">Añadirse</ion-button>
+            <ion-button size="small" color="light">Info</ion-button>
+          </ion-label>
+        </ion-item>
+        <ng-template #tournament>
+          <ion-item>
+            <ion-avatar slot="start">
+              <img [src]="$any(event).img">
+            </ion-avatar>
+            <ion-label>
+              <p>Nombre: {{$any(event).name}}</p>
+              <p>{{$any(event).day}}</p>
+              <p>Total de Jugadores: {{$any(event).name}}</p>
+              <p *ngIf="$any(event).ranked; else clasificatorio">Clasificatorio</p>
+              <ng-template #clasificatorio>
+                <p>No Clasificatorio</p>
+              </ng-template>
+              <ion-button size="small" color="success" (click)="select(eventIndex)">Añadirse</ion-button>
+              <ion-button size="small" color="light">Info</ion-button>  
+            </ion-label>
+          </ion-item>
+        </ng-template>
+      </div>
+    </ion-list>
+  </form>
+</ion-content>
