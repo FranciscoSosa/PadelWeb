@@ -2,7 +2,7 @@
   <form>
     <h1 class="schedule-header">Eventos Pendientes</h1>
     <ion-list>
-      <div *ngFor="let event of user?.pending">
+      <div *ngFor="let event of events">
         <ion-item class="background" *ngIf="isMatch(event); else tournament">
           <ion-avatar class="match-border" slot="start">
             <img [src]="$any(event).img">
