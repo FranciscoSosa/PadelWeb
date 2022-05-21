@@ -26,6 +26,10 @@ const routes: Routes = [
   {
     path: 'chooseMatch/:uid',
     loadChildren: () => import('./user-choose-match/user-choose-match.module').then( m => m.UserChooseMatchPageModule)
+  },
+  {
+    path: 'events',
+    loadChildren: () => import('./user-events/user-events.module').then( m => m.UserEventsPageModule)
   }
 ];
 
