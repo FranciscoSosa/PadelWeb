@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {MainUserPage} from "./main-user.page";
 import {UserStatisticsComponent} from "./user-statistics/user-statistics.component";
 import { UserHeaderComponent } from './user-header/user-header.component';
+import {EditProfileComponent} from "./edit-profile/edit-profile.component";
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
       {
         path: 'header',
         component: UserHeaderComponent,
+      },
+      {
+        path: 'profile',
+        component: EditProfileComponent
       }
     ]
   },

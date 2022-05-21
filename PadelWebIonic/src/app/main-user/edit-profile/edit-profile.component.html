@@ -1,0 +1,87 @@
+<!--<div style="min-height: 50vh" class="content-section">-->
+<!--  <form style="height:100%" class="vertical-flex" (ngSubmit)="submit()" #userEditProfile="ngForm">-->
+<!--    <div class="user-edit-form container-fluid">-->
+<!--      <div class="row">-->
+<!--        <div class="col-md-3 col-12 m-auto">-->
+<!--          <label for="name">Nombre:</label>-->
+<!--        </div>-->
+<!--        <div class="col-md-7 col-12 m-auto">-->
+<!--          <input type="text" id="name" [(ngModel)]="model.name" name="name">-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="row">-->
+<!--        <div class="col-md-3 col-12 m-auto">-->
+<!--          <label for="phone">Teléfono:</label>-->
+<!--        </div>-->
+<!--        <div class="col-md-7 col-12 m-auto">-->
+<!--          <input type="text" id="phone" [(ngModel)]="model.phone" name="phone" #phone="ngModel"-->
+<!--                 pattern="[1-9][0-9]{8}">-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div *ngIf="phone.touched && phone.errors?.['pattern']"-->
+<!--           class="formError row col-11 ml-auto mr-auto mt-1 mb-1">-->
+<!--        ¡El teléfono debe tener un formato válido!-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <button class="user-edit-form" [disabled]="userEditProfile.invalid">GUARDAR LOS CAMBIOS</button>-->
+<!--    <input type="file"-->
+<!--           #inputFile-->
+<!--           style="display: none"-->
+<!--           (change)="uploadFile($event)">-->
+<!--    <button class="user-edit-form" (click)="inputFile.click()">-->
+<!--      CAMBIAR IMAGEN-->
+<!--    </button>-->
+<!--  </form>-->
+<!--</div>-->
+
+<ion-content style="--ion-background-color: rgba(0,0,0,0)">
+  <form d="login-form" #userEditProfile="ngForm">
+    <ion-list>
+      <ion-item>
+        <ion-title>
+          Editar Perfil
+        </ion-title>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          Imagen:
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-img [src]="user.img"></ion-img>
+      </ion-item>
+      <ion-item>
+        <input type="file"
+               #inputFile
+               style="display: none"
+               (change)="uploadFile($event)">
+        <ion-input type="submit" class="user-edit-form"
+                   [disabled]="userEditProfile.invalid"
+                   (click)="inputFile.click()" >CAMBIAR IMAGEN</ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          Nombre: {{user.name}}
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-input type="name" [(ngModel)]="model.name" name="name"
+                    placeholder="Nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          Teléfono: {{user.phone}}
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-input type="phone" name="phone" [(ngModel)]="model.phone" placeholder="Teléfono"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="submit" class="user-edit-form"
+                   [disabled]="userEditProfile.invalid"
+                   (click)="submit()" >GUARDAR LOS CAMBIOS</ion-input>
+      </ion-item>
+    </ion-list>
+  </form>
+</ion-content>

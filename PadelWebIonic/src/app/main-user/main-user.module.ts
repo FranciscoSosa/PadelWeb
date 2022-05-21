@@ -6,6 +6,7 @@ import { MainUserRoutingModule } from './main-user-routing.module';
 import { MainUserPage } from './main-user.page';
 import { UserStatisticsComponent } from "./user-statistics/user-statistics.component";
 import { UserHeaderComponent } from './user-header/user-header.component';
+import {EditProfileComponent} from "./edit-profile/edit-profile.component";
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { UserHeaderComponent } from './user-header/user-header.component';
   declarations: [
     MainUserPage,
     UserStatisticsComponent,
-    UserHeaderComponent
+    UserHeaderComponent,
+    EditProfileComponent
   ]
 })
 export class MainUserModule {}

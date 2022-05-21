@@ -13,8 +13,7 @@ import {Tournament} from "src/app/types/tournament";
     class: environment.userPageLayout
   }
 })
-// @ts-ignore
-export class UserStatisticsComponent implements ionicViewDidEnter {
+export class UserStatisticsComponent {
 
   userInfo!: User;
 
