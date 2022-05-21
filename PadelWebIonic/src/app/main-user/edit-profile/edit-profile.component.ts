@@ -55,7 +55,6 @@ export class EditProfileComponent {
     const target = event.target as HTMLInputElement;
     if(target.files && target.files.length > 0) {
       const imagePath = `/user-images/${this.user.uid}`;
-      console.log(imagePath)
       const imageRef = this.storage.ref(imagePath);
       const uploadTask = this.storage.upload(imagePath, target.files[0]);
 
