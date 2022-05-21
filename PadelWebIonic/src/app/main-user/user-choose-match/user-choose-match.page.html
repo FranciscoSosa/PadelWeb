@@ -3,7 +3,7 @@
     <h1 class="schedule-header">Selecciona el Partido del Club</h1>
     <ion-list>
       <div *ngFor="let event of club?.active; let eventIndex = index">
-        <ion-item *ngIf="isMatch(event); else tournament">
+        <ion-item class="background" *ngIf="isMatch(event); else tournament">
           <ion-avatar class="match-border" slot="start">
             <img [src]="$any(event).img">
           </ion-avatar>
@@ -19,7 +19,7 @@
           </ion-label>
         </ion-item>
         <ng-template #tournament>
-          <ion-item>
+          <ion-item class="background">
             <ion-avatar slot="start">
               <img [src]="$any(event).img">
             </ion-avatar>
