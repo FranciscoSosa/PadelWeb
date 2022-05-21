@@ -605,3 +605,8 @@ aside.content-section {
 .main-container {
   height: 100%;
 }
+
+.margin-top {
+  position: absolute;
+  top: 50px;
+}
