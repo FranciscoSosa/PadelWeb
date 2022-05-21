@@ -1,10 +1,12 @@
-import {Injectable, OnInit} from '@angular/core';
+import {Injectable} from '@angular/core';
 import {AngularFirestore} from "@angular/fire/compat/firestore";
 import {SQLite} from "@ionic-native/sqlite/ngx";
 import {Platform} from "@ionic/angular";
 import {SQLiteObject} from "@ionic-native/sqlite";
-import {Club} from "../types/club";
-import {User} from "../types/user";
+import {interval} from "rxjs";
+import {switchMap} from "rxjs/operators";
+import {AuthService} from "./auth.service";
+import {Match} from "../types/match";
 
 @Injectable({
   providedIn: 'root'
@@ -18,42 +20,43 @@ export class PendingEventsService {
   constructor(
     private afs: AngularFirestore,
     private sqlite: SQLite,
-    private platform: Platform
+    private platform: Platform,
+    private auth: AuthService
   )
   {
     this.databaseConn();
-    this.setAutomaticUpdate();
   }
 
   setAutomaticUpdate() {
-    this.afs.collection<User>('User').valueChanges().subscribe(users => {
+    this.auth.user$.subscribe(user => {
+      if(user == null) return;
+
       this.dbInstance.executeSql(`
         DELETE FROM ${this.dbTable};
         VACUUM;
       `)
 
-      for (let u of users) {
-        for (let event of u.pending) {
-          if('dayHour' in event) {
-            try {
-              this.dbInstance.executeSql(`
-              INSERT INTO ${this.dbTable} (
-                dayHour,
-                players,
-                ranked,
-                ranking,
-                img
-              ) values (
-                ${event.dayHour},
-                ${JSON.stringify(event.players)},
-                ${event.ranked? "TRUE":"FALSE"},
-                ${event.ranking},
-                ${event.img}
-              );`,
-                []);
-            } catch (err) {
-              alert(err);
-            }
+      for (let event of user.pending) {
+        if('dayHour' in event) {
+          try {
+            const query = `
+                INSERT INTO ${this.dbTable} (
+                  dayHour,
+                  players,
+                  ranked,
+                  ranking,
+                  img
+                ) values (
+                  '${event.dayHour}',
+                  '${JSON.stringify(event.players)}',
+                  '${event.ranked? "TRUE":"FALSE"}',
+                  '${event.ranking}',
+                  '${event.img}'
+                );`
+
+            this.dbInstance.executeSql( query );
+          } catch (err) {
+            console.log(err);
           }
         }
       }
@@ -72,9 +75,37 @@ export class PendingEventsService {
          ranking varchar(255),
          img varchar(255)
       )`, []);
+
+    this.setAutomaticUpdate();
+  }
+
+  async _getPendingEvents() {
+    const query = `SELECT * FROM '${this.dbTable}';`;
+    const res = await this.dbInstance.executeSql(query, [])
+
+    const events: Match[] = [];
+
+    for(let i = 0; i < res.rows.length; i++) {
+      const row = res.rows.item(i);
+      const event = {
+        dayHour: row.dayHour,
+        players: JSON.parse(row.players),
+        ranked: row.ranked != 0,
+        ranking: row.ranking,
+        img: row.img
+      }
+
+      events.push(event)
+    }
+
+    return events;
   }
 
   getPendingEvents(){
-
+    return interval(500).pipe(
+      switchMap( async () => {
+        return await this._getPendingEvents();
+      })
+    );
   }
 }

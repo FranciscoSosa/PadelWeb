@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { Match } from 'src/app/types/match';
 import { Tournament } from 'src/app/types/tournament';
-import { User } from 'src/app/types/user';
 import {PendingEventsService} from "../../services/pending-events.service";
 
 @Component({
@@ -12,7 +11,7 @@ import {PendingEventsService} from "../../services/pending-events.service";
 })
 export class UserEventsPage implements OnInit {
 
-  user: User | undefined;
+  events: Match[];
 
   constructor(
     private auth: AuthService,
@@ -20,12 +19,11 @@ export class UserEventsPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.auth.user$.subscribe(
-      (user) => {
-        this.user = user;
-        console.log(user);
+    this.pendingEvents.getPendingEvents().subscribe(events => {
+      if(events) {
+        this.events = events;
       }
-    );
+    });
   }
 
   isMatch(event: Tournament | Match){
