@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
+import { AuthService } from 'src/app/services/auth.service';
 
 
 @Component({
@@ -9,8 +10,12 @@ import { MenuController } from '@ionic/angular';
 })
 export class UserHeaderComponent implements OnInit {
 
-  constructor(private menu: MenuController) { }
+  constructor(private menu: MenuController, private auth: AuthService) { }
 
-    ngOnInit(): void {
+  ngOnInit(): void {
+  }
+
+  logOut(){
+    this.auth.signOut();
   }
 }

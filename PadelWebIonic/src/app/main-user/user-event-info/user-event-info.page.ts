@@ -25,7 +25,6 @@ export class UserEventInfoPage implements OnInit {
     this.clubService.getClubByUid(this.uid).subscribe(club => {
       this.club = club[0];
       this.event = this.club.active[this.index];
-      console.log(club[0])
     });
   }
 

@@ -26,12 +26,10 @@ export class UserChooseMatchPage implements OnInit {
     this.url = this.router.snapshot.paramMap.get('uid');
     this.clubService.getClubByUid(this.url).subscribe(club => {
       this.club = club[0];
-      console.log(club[0])
     });
     this.auth.user$.subscribe(
       (user) => {
         this.user = user;
-        console.log(user);
       }
     );
   }
