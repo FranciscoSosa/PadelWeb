@@ -18,6 +18,14 @@ const routes: Routes = [
         component: UserHeaderComponent,
       }
     ]
+  },
+  {
+    path: 'userChooseClub',
+    loadChildren: () => import('./user-choose-day-and-club/user-choose-day-and-club.module').then( m => m.UserChooseDayAndClubPageModule)
+  },
+  {
+    path: 'chooseMatch/:uid',
+    loadChildren: () => import('./user-choose-match/user-choose-match.module').then( m => m.UserChooseMatchPageModule)
   }
 ];
 

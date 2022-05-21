@@ -6,12 +6,20 @@ import {MainUserPage} from "./main-user/main-user.page";
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'main-user',
+    redirectTo: '/main-user/statistics',
     pathMatch: 'full'
   },
   {
     path: 'main-user',
     loadChildren: () => import('./main-user/main-user.module').then(m => m.MainUserModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'sign-in',
+    loadChildren: () => import('./sign-in/sign-in.module').then( m => m.SignInPageModule)
   },
 ];
 
