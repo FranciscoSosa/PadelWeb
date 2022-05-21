@@ -3,7 +3,7 @@
     <h1 class="schedule-header">Eventos Pendientes</h1>
     <ion-list>
       <div *ngFor="let event of user?.pending">
-        <ion-item *ngIf="isMatch(event); else tournament">
+        <ion-item class="background" *ngIf="isMatch(event); else tournament">
           <ion-avatar class="match-border" slot="start">
             <img [src]="$any(event).img">
           </ion-avatar>
@@ -17,7 +17,7 @@
           </ion-label>
         </ion-item>
         <ng-template #tournament>
-          <ion-item>
+          <ion-item class="background">
             <ion-avatar slot="start">
               <img [src]="$any(event).img">
             </ion-avatar>
