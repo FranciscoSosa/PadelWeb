@@ -15,6 +15,9 @@ import {EditProfileComponent} from "./edit-profile/edit-profile.component";
     IonicModule,
     MainUserRoutingModule
   ],
+  exports: [
+    UserHeaderComponent
+  ],
   declarations: [
     MainUserPage,
     UserStatisticsComponent,

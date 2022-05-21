@@ -21,6 +21,10 @@ const routes: Routes = [
     path: 'sign-in',
     loadChildren: () => import('./sign-in/sign-in.module').then( m => m.SignInPageModule)
   },
+  {
+    path: 'affiliated-clubs',
+    loadChildren: () => import('./affiliated-clubs/affiliated-clubs.module').then( m => m.AffiliatedClubsPageModule)
+  },
 ];
 
 @NgModule({
