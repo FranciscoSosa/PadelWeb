@@ -7,6 +7,7 @@ import {interval} from "rxjs";
 import {switchMap} from "rxjs/operators";
 import {AuthService} from "./auth.service";
 import {Match} from "../types/match";
+import {Tournament} from "../types/tournament";
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,8 @@ import {Match} from "../types/match";
 export class PendingEventsService {
 
   private readonly dbName = 'PendingEvents.db'
-  private readonly dbTable = 'PendingEvents'
+  private readonly matchTable = 'Match'
+  private readonly tournamentTable = 'Tournament'
   private dbInstance: SQLiteObject;
 
   constructor(
@@ -32,15 +34,23 @@ export class PendingEventsService {
       if(user == null) return;
 
       this.dbInstance.executeSql(`
-        DELETE FROM ${this.dbTable};
+        DELETE FROM ${this.matchTable};
         VACUUM;
       `)
 
+      this.dbInstance.executeSql(`
+        DELETE FROM ${this.tournamentTable};
+        VACUUM;
+      `)
+
+      console.log("USER UPDATE");
+
       for (let event of user.pending) {
-        if('dayHour' in event) {
-          try {
-            const query = `
-                INSERT INTO ${this.dbTable} (
+        try {
+          let query;
+          if('dayHour' in event) {
+            query = `
+                INSERT INTO ${this.matchTable} (
                   dayHour,
                   players,
                   ranked,
@@ -54,10 +64,28 @@ export class PendingEventsService {
                   '${event.img}'
                 );`
 
-            this.dbInstance.executeSql( query );
-          } catch (err) {
-            console.log(err);
+          } else {
+            query = `
+                INSERT INTO ${this.tournamentTable} (
+                  name,
+                  day,
+                  players,
+                  ranked,
+                  comments,
+                  img
+                ) values (
+                  '${event.name}',
+                  '${event.day}',
+                  '${event.players}',
+                  '${event.ranked? "TRUE":"FALSE"}',
+                  '${event.comments}',
+                  '${event.img}'
+                );`
           }
+
+          this.dbInstance.executeSql(query, []);
+        } catch (err) {
+          console.log(err);
         }
       }
     });
@@ -68,7 +96,7 @@ export class PendingEventsService {
     this.dbInstance = await this.sqlite.create({name: this.dbName, location: 'default'})
     await this.dbInstance.executeSql(
       `
-      CREATE TABLE IF NOT EXISTS ${this.dbTable} (
+      CREATE TABLE IF NOT EXISTS ${this.matchTable} (
          dayHour varchar(255),
          players varchar(255),
          ranked INTEGER,
@@ -76,18 +104,28 @@ export class PendingEventsService {
          img varchar(255)
       )`, []);
 
+    await this.dbInstance.executeSql(`
+      CREATE TABLE IF NOT EXISTS ${this.tournamentTable} (
+        name varchar(255),
+        day text,
+        players INTEGER,
+        ranked INTEGER,
+        comments varchar(255),
+        img varchar(255)
+      )`, []);
+
     this.setAutomaticUpdate();
   }
 
-  async _getPendingEvents() {
-    const query = `SELECT * FROM '${this.dbTable}';`;
+  private async _getPendingMatches() {
+    const query = `SELECT * FROM '${this.matchTable}';`;
     const res = await this.dbInstance.executeSql(query, [])
 
-    const events: Match[] = [];
+    const matches: Match[] = [];
 
     for(let i = 0; i < res.rows.length; i++) {
       const row = res.rows.item(i);
-      const event = {
+      const match = {
         dayHour: row.dayHour,
         players: JSON.parse(row.players),
         ranked: row.ranked != 0,
@@ -95,16 +133,42 @@ export class PendingEventsService {
         img: row.img
       }
 
-      events.push(event)
+      matches.push(match)
     }
 
-    return events;
+    return matches;
+  }
+
+  private async _getPendingTournaments() {
+    const query = `SELECT * FROM ${this.tournamentTable}`
+    const res = await this.dbInstance.executeSql(query, [])
+
+    const tournaments: Tournament[] = [];
+
+    for(let i = 0; i < res.rows.length; i++) {
+      const row = res.rows.item(i);
+      const tournament = {
+        day: row.day,
+        players: row.players,
+        ranked: row.ranked != 0,
+        img: row.img,
+        comments: row.comments,
+        name: row.name
+      }
+
+      tournaments.push(tournament)
+    }
+
+    return tournaments;
   }
 
   getPendingEvents(){
     return interval(500).pipe(
       switchMap( async () => {
-        return await this._getPendingEvents();
+        const events: (Match | Tournament)[] = await this._getPendingMatches();
+        events.push(...await this._getPendingTournaments());
+
+        return events;
       })
     );
   }
