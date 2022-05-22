@@ -1,7 +1,7 @@
 export interface Tournament {
   id?: string,
   name: string,
-  day: Date,
+  day: string,
   players: number,
   ranked: boolean,
   comments: string,

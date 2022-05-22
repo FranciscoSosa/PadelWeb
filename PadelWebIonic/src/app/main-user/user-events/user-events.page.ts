@@ -11,7 +11,7 @@ import {PendingEventsService} from "../../services/pending-events.service";
 })
 export class UserEventsPage implements OnInit {
 
-  events: Match[];
+  events: (Match | Tournament)[];
 
   constructor(
     private auth: AuthService,
