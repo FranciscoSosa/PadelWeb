@@ -1,0 +1,43 @@
+  <ion-menu side="end" content-id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title style="color: white;">Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item href="/main-user/profile">
+          <ion-icon name="person" slot="start"></ion-icon>
+          <ion-label>Editar perfil</ion-label>
+        </ion-item>
+        <ion-item href="/main-user/statistics">
+          <ion-icon name="stats-chart" slot="start"></ion-icon>
+          <ion-label>Estadísticas</ion-label>
+        </ion-item>
+        <ion-item href="/main-user/userChooseClub">
+          <ion-icon name="tennisball" slot="start"></ion-icon>
+          <ion-label>Partidos</ion-label>
+        </ion-item>
+        <ion-item href="/main-user/events">
+          <ion-icon name="clipboard" slot="start"></ion-icon>
+          <ion-label>Pendiente</ion-label>
+        </ion-item>
+        <ion-item (click)="logOut()" [routerLink]="['/']">
+          <ion-icon name="log-out" slot="start"></ion-icon>
+          <ion-label>Log Out</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="end">
+          <ion-menu-button style="color: white"></ion-menu-button>
+        </ion-buttons>
+        <ion-avatar>
+          <img id="logo_principal" alt="logo" class="logo" src="../../../assets/images/logo.svg">
+        </ion-avatar>
+      </ion-toolbar>
+    </ion-header>
+  </div>

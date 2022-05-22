@@ -1,0 +1,8 @@
+{
+  "name": "PadelWeb",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

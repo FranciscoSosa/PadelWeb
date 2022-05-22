@@ -1,0 +1,48 @@
+@import "../../../styles.css";
+
+.user-statistics-grid {
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: .6fr 1fr;
+  grid-template-areas:
+    'r s s'
+    'h s s'
+    'h s s'
+    'h s s'
+    'h s s';
+}
+
+:root {
+  --ion-background-color: rgba(0,0,0,0);
+}
+
+.content-section {
+  height: 100%;
+}
+
+.rank-display {
+  grid-area: r;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: .5fr 1fr .5fr;
+  align-items: center;
+}
+
+.rank-display > span {
+  font-size: 3.5em;
+  text-align: center;
+}
+
+.match-info-display > img {
+  height: 50%;
+  margin-right: 1em;
+}
+
+.history-display {
+  grid-area: h;
+  padding-bottom: 2em;
+}
+
+.statistics-display {
+  grid-area: s;
+}

@@ -1,0 +1,15 @@
+<app-home-header></app-home-header>
+
+<ion-content>
+  <ion-title>CLUBS AFILIADOS</ion-title>
+  <ion-list>
+    <ion-item *ngFor="let club of affiliatedClubs">
+      <ion-card-content>
+        <ion-img [src]="club.img"></ion-img>
+        <ion-label style="margin: 10px">{{ club.name }}</ion-label>
+        <ion-label style="margin: 10px">{{ club.email }}</ion-label>
+        <ion-label style="margin: 10px">{{ club.phone }}</ion-label>
+      </ion-card-content>
+    </ion-item>
+  </ion-list>
+</ion-content>

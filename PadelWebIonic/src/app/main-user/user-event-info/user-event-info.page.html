@@ -1,0 +1,31 @@
+<ion-content fullscreen>
+  <ion-card>
+    <img class="center" [src]="club?.img"/>
+    <ion-card-header>
+      <ion-card-subtitle style="color: black;">{{event?.name}}</ion-card-subtitle>
+      <ion-card-title>{{club?.name}}</ion-card-title>
+    </ion-card-header>
+    <div *ngIf="event">
+      <ion-card-content class="background" *ngIf="isMatch(event); else tournament">
+        <p>Fecha: {{event?.dayHour}}</p>
+        <p>Espacios disponibles: {{4 - event?.players.length}}</p>
+        <p *ngIf="event?.ranked; else clasificatorio">Clasificatorio</p>
+        <p> Ranking: {{event?.ranking}}</p>
+        <ng-template #clasificatorio>
+          <p>No Clasificatorio</p>
+        </ng-template>
+      </ion-card-content>
+      <ng-template #tournament>
+        <ion-card-content class="background">
+          <p>Fecha: {{event?.day}}</p>
+          <p>Nº de jugadores: {{event?.players}}</p>
+          <p *ngIf="event?.ranked; else clasificatorio">Clasificatorio</p>
+          <ng-template #clasificatorio>
+            <p>No Clasificatorio</p>
+          </ng-template>
+          <p>Comentarios: {{event?.comments}}</p>
+        </ion-card-content>
+      </ng-template>
+    </div>
+  </ion-card>
+</ion-content>
